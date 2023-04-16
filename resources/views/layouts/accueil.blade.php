@@ -60,7 +60,7 @@
 
         gtag('config', 'UA-255498841-1');
     </script>
-
+    
     @livewireStyles
   </head>
 

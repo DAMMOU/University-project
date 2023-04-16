@@ -14,7 +14,7 @@ use App\Http\Livewire\Admin\Permissions;
 use App\Http\Livewire\Admin\Regions;
 use App\Http\Livewire\Admin\Roles;
 use App\Http\Livewire\Admin\TypeEtablissements;
-
+use App\Http\Livewire\Admin\Cours;
 use App\Http\Livewire\Client\Accueil;
 use App\Http\Livewire\Client\Etablissement as ClientEtablissement;
 use App\Http\Livewire\Client\Module;
@@ -22,6 +22,7 @@ use App\Http\Livewire\Client\ContactUs;
 use App\Http\Livewire\Client\Cvs;
 use App\Http\Livewire\Client\Exemples;
 use App\Http\Livewire\Client\Universites;
+
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -109,6 +110,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
                 Route::get('/filieres', Filieres::class)->name('filieres.index')->middleware('auth.superadmin');
                 Route::get('/modules', Modules::class)->name('modules.index')->middleware('auth.superadmin');
                 Route::get('/exemples', Exemples::class)->name('exemples.index')->middleware('auth.superadmin');
+                Route::get('/cours', Cours::class)->name('cours.index')->middleware('auth.superadmin');
+                Route::get('/td', Exemples::class)->name('td.index')->middleware('auth.superadmin');
+                Route::get('/tp', Exemples::class)->name('tp.index')->middleware('auth.superadmin');
+
             });
     });
 

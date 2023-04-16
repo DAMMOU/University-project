@@ -23,5 +23,6 @@ class Module extends Component
     {
         $this->module = ModelsModule::find($id);
     }
+    
 
 }

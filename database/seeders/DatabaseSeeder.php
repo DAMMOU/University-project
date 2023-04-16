@@ -49,7 +49,9 @@ class DatabaseSeeder extends Seeder
         $this->call(CategorieCvSeeder::class);
         $this->call(TypeCvSeeder::class);
         $this->call(CvSeeder::class);
-        
+        $this->call(CourSeeder::class);
+        $this->call(CoursModulesSeeder::class);
+
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',

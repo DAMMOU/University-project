@@ -55,8 +55,6 @@ class User extends Component
                 'editUser.phone' => ['required', 'numeric', Rule::unique('users', 'phone')->ignore($this->editUser['id'])],
                 'editUser.email' => ['required', 'email', Rule::unique('users', 'email')->ignore($this->editUser['id'])],
                 'editUser.password' => 'required|min:6',
-
-        
             ];
         }
         return [

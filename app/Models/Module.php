@@ -23,4 +23,9 @@ class Module extends Model
     public function section(){
         return $this->belongsTo(Section::class);
     }
+
+    public function cours()
+    {
+        return $this->belongsToMany(Cour::class, 'cours_modules');
+    }
 }

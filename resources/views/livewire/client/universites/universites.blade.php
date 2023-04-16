@@ -14,11 +14,14 @@
           <div class="col-md-2">
           </div>
   
+
+
           <div class="col-md-8 ">
             <div class="pt-2 ps-lg-2">
               <div class="">
                 <h1 class="bd-title mb-1">Les univeristés</h1>
               </div> 
+
               <h3 class="mb-2 lh-lg">
                 Bienvenue sur notre page dédié aux universités marocaines ! 
               </h3>

@@ -161,19 +161,21 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{route('superadmin.gestions.cours.index')}}" 
+                            class="nav-link {{active('superadmin.gestions.cours.index')}}">
+                                <i class="nav-icon fas fa-sliders-h"></i>
+                                <p>Cours</p>   
+                            </a>
+                        </li>
+                       
+                        <li class="nav-item">
                             <a href="{{route('superadmin.gestions.villes.index')}}" 
                             class="nav-link {{active('superadmin.gestions.villes.index')}}">
                                 <i class="nav-icon fas fa-list-ul"></i>
                                 <p>Villes</p>   
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{route('superadmin.gestions.regions.index')}}" 
-                            class="nav-link {{active('superadmin.gestions.regions.index')}}">
-                                <i class="nav-icon fas fa-sliders-h"></i>
-                                <p>Regions</p>   
-                            </a>
-                        </li>
+                        
                     </ul>
                 </li>
                
