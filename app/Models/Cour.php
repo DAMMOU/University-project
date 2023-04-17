@@ -11,6 +11,7 @@ class Cour extends Model
     protected $fillable = [
         'path',
         'domain',
+        'label',
     ];
     public function modules()
     {

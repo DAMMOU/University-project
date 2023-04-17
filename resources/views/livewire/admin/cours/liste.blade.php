@@ -4,12 +4,11 @@
             <div class="card">
                 <div class="card-header bg-gradient-primary ">
                     <h3 class="card-title d-flex align-items-center">
-                    <i class="fas fa-users fa-2x mr-2"></i>
                         Liste des Cours
                     </h3>
                     <div class="card-tools d-flex align-items-center ">
                         <button class="btn btn-link text-white mr-4 d-block" wire:click ="goToAdd">
-                            <i class="fas fa-user-plus"></i>
+                            <i class="fas fa-plus"></i>
                             Nouveau Cour
                         </button>
 
