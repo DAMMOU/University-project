@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Filiere;
+use App\Models\Module;
+use App\Models\Section;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -110,8 +113,34 @@ class ModuleSeeder extends Seeder
             ['intitule'=>'Informatique 3','filiere_id'=>1,'section_id'=>4],
             ['intitule'=>'Analyse numérique','filiere_id'=>1,'section_id'=>4],
 
-
-
         ]);
+        $filiereIds = Filiere::pluck('id');
+        $sectionIds = Section::pluck('id');
+
+        foreach ($filiereIds as $filiereId) {
+            foreach ($sectionIds as $sectionId) {
+                for ($i = 1; $i <= 6; $i++) {
+                    Module::create([
+                        'filiere_id' => $filiereId,
+                        'section_id' => $sectionId,
+                        'intitule' => "Module " . $i,
+                        'code' => "CODE" . $i,
+                        'prof' => "Professeur " . $i,
+                        'desc' => "Description du module " . $i,
+                    ]);
+                }
+            }
+        }
+
     }
+
 }
+
+
+
+
+
+
+        
+
+  

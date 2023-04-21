@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Cour;
 use App\Models\Module;
-
+use Illuminate\Support\Facades\DB;
 
 class CoursModulesSeeder extends Seeder
 {
@@ -17,18 +17,24 @@ class CoursModulesSeeder extends Seeder
      */
     public function run()
     {
-        // Obtenir tous les cours et tous les modules
-        $cours = Cour::all();
-        $modules = Module::all();
+        $moduleIds = Module::pluck('id');
+        $coursIds = Cour::pluck('id');
 
-        // Associer aléatoirement un ou plusieurs modules à chaque cours
-        foreach ($cours as $c) {
-            $randomModules = $modules->random(rand(1, 5)); // choisir entre 1 et 5 modules aléatoires
-            $c->modules()->sync($randomModules, [
-                'created_at' => now(),
-                'updated_at' => now(),
-            ]);
+        foreach ($moduleIds as $moduleId) {
+            $randomCoursIds = $coursIds->random(3);
+
+            foreach ($randomCoursIds as $coursId) {
+                DB::table('cours_modules')->insert([
+                    'cour_id' => $coursId,
+                    'module_id' => $moduleId,
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ]);
+            }
         }
     }
+
+
+    
 }
 

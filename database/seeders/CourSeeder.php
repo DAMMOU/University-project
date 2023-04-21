@@ -16,35 +16,17 @@ class CourSeeder extends Seeder
      */
     public function run()
     {
+       
         $faker = Faker::create();
-
+//
         // Générer 50 cours aléatoires
-        for ($i = 1; $i <= 50; $i++) {
+        for ($i = 1; $i <= 200; $i++) {
             Cour::create([
                 'label' => $faker->sentence(3),
-                'path' => $faker->url,
+                'path' => "https://docs.google.com/viewer?url=https://lafac.net/CV_DAMMOU_Youssef.pdf",
                 'domain' => $faker->word,
             ]);
         }
-      // DB::table('cours')->insert([
-      //     [
-      //         'path' => 'math/algebra',
-      //         'domain' => 'mathematics',
-      //         'created_at' => now(),
-      //         'updated_at' => now(),
-      //     ],
-      //     [
-      //         'path' => 'math/geometry',
-      //         'domain' => 'mathematics',
-      //         'created_at' => now(),
-      //         'updated_at' => now(),
-      //     ],
-      //     [
-      //         'path' => 'science/physics',
-      //         'domain' => 'science',
-      //         'created_at' => now(),
-      //         'updated_at' => now(),
-      //     ],
-      // ]);
+      
     }
 }
