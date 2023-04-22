@@ -13,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('exemples', function (Blueprint $table) {
-            $table->id();
-            $table->string('chemin')->nullable();
-            $table->foreignId('type_exemple_id');
-            $table->foreignId('categorie_exemple_id');
-            $table->string('desc')->nullable();
+        Schema::create('module_pfe', function (Blueprint $table) {
+            $table->foreignId('pfe_id')->constrained('pfes');
+            $table->foreignId('module_id')->constrained('modules');
             $table->timestamps();
         });
         Schema::enableForeignKeyConstraints();
@@ -31,10 +28,11 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('exemples',function(Blueprint $table){
+        Schema::table('pfes_roles',function(Blueprint $table){
             Schema::disableForeignKeyConstraints();
-            $table->dropForeign(['type_exemple_id','categorie_exemple_id']);
+            $table->dropForeign(['pfe_id','module_id']);
         });
-        Schema::dropIfExists('exemples');
+       
+        Schema::dropIfExists('module_pfe');
     }
 };

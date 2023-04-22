@@ -17,15 +17,21 @@ class Module extends Model
         'desc',
     ];
 
-    public function filiere(){
+    public function filiere()
+    {
         return $this->belongsTo(Filiere::class);
     }
-    public function section(){
-        return $this->belongsTo(Section::class);
+    public function section()
+    {
+        return $this->  belongsTo(Section::class);
     }
 
     public function cours()
     {
         return $this->belongsToMany(Cour::class, 'cours_modules');
+    }
+    public function pfes()
+    {
+        return $this->belongsToMany(Pfe::class);
     }
 }
