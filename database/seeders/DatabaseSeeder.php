@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-
+        \App\Models\Utilisateur::factory(20)->create();
         \App\Models\User::factory(20)->create();
         $this->call(RoleSeeder::class);
         $this->call(UserRoleSeeder::class);
@@ -52,8 +52,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CourSeeder::class);
         $this->call(CoursModulesSeeder::class);
 
-        $this->call(PfeSeeder::class);
-        $this->call(ModulePfeSeeder::class);
+        
 
 
         // \App\Models\User::factory()->create([

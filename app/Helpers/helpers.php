@@ -12,7 +12,7 @@ function userlastName(){
 }
 
 function userfirstName(){
-    return auth()->user()->prenom;
+    return auth()->user()->firstName;
 }
 
 function userfullName(){
@@ -20,7 +20,7 @@ function userfullName(){
 }
 
 function userImage(){
-    return auth()->user()->photo;
+    return auth()->user()->image;
 }
 
 
@@ -43,3 +43,24 @@ function active($route){
     }
     return '';
 }
+
+
+
+function generateAcronym($str)
+{
+    $words = preg_split('/\s+/', $str, -1, PREG_SPLIT_NO_EMPTY);
+    $acronym = '';
+
+    foreach ($words as $word) {
+        if (!in_array(strtolower($word), ['des','de', 'et'])) {
+            $acronym .= strtoupper(substr($word, 0, 1));
+        }
+    }
+
+    return $acronym;
+}
+
+
+
+
+

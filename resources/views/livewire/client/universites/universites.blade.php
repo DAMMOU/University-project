@@ -1,4 +1,8 @@
 <div>
+@php
+    use Illuminate\Support\Str;
+@endphp
+
   @extends('layouts.accueil')
   @section('contenu')
     
@@ -47,7 +51,8 @@
                     <div class="accordion-body">
                       <div class="list-group">
                         @foreach ($universite->etablissements as $etablissement)
-                        <a href="{{url("etablissement/$etablissement->id")}}" class="list-group-item list-group-item-action">
+                          
+                        <a href="{{ url($universite->initiale.'/'.generateAcronym($etablissement->nom).'-'.urlencode(Str::slug($etablissement->ville->nom)).'/formation'.'/'.$etablissement->id)}}" class="list-group-item list-group-item-action">
                           {{$etablissement->nom." - ".$etablissement->ville->nom}} 
                         </a>
                         @endforeach

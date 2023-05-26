@@ -30,8 +30,5 @@ class Module extends Model
     {
         return $this->belongsToMany(Cour::class, 'cours_modules');
     }
-    public function pfes()
-    {
-        return $this->belongsToMany(Pfe::class);
-    }
+ 
 }

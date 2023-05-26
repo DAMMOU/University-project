@@ -87,7 +87,7 @@
                 </li>
             </ul>
             <a class="btn btn-bd-inscription d-lg-inline-block my-2 my-md-0 ms-md-3"
-                href="#">Inscription</a>
+                href="{{route('inscription')}}">Inscription</a>
         </div>
     </nav>
 </header>
