@@ -23,7 +23,7 @@ class CourSeeder extends Seeder
         for ($i = 1; $i <= 200; $i++) {
             Cour::create([
                 'label' => $faker->sentence(3),
-                'path' => "https://docs.google.com/viewer?url=https://lafac.net/CV_DAMMOU_Youssef.pdf",
+                'path' => "https://docs.google.com/viewer?url=https://lafac.net/love_laravel.pdf",
                 'domain' => $faker->word,
             ]);
         }

@@ -2,7 +2,6 @@
 
 namespace App\Http\Livewire\Client;
 
-use App\Models\Etablissement;
 use App\Models\Universite;
 use Livewire\Component;
 

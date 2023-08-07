@@ -24,4 +24,6 @@ class Utilisateur extends Model
         'je_suis',
     ];
 
+
 }
+
