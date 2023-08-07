@@ -36,9 +36,11 @@
               
               <div class="accordion accordion-flush " id="accordionFlushExample">
                 @foreach ($this->formations as $formation )
-                <div class="accordion-item mx-0">
+                <div class="accordion-item "style="background-color: transparent;">
                   <h2 class="accordion-header" id="flush-headingformation{{$formation->id}}">
-                    <button class="accordion-button collapsed fs-5 fw-bolder mx-0 text-drak-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-1" type="button" data-bs-toggle="collapse" 
+                    <button id="btn-accordion"class="accordion-button collapsed fs-5 fw-bolder mx-0 text-drak-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-1" 
+                       style="background-color: #712cf9;background-image: linear-gradient(180deg,#712cf9 10%,#224abe 100%);background-size: cover;"
+                      type="button" data-bs-toggle="collapse" 
                       data-bs-target="#flush-collapse{{$formation->id}}" aria-expanded="false"
                        aria-controls="flush-collapseformation{{$formation->id}}">
                       {{$formation->intitule}}
@@ -50,10 +52,11 @@
                       @foreach ( $formation->filieres as $filiere )
                           
                           <div class="accordion accordion-flush" id="filiere{{$filiere->id}}">
-                            <div class="accordion-item">
-                              <h2 class="accordion-header" id="flush-headingfiliere{{$filiere->id}}">
-                                <button class="accordion-button collapsed fs-5 p-3 text-drak bg-primary-subtle border border-primary-subtle rounded-3" type="button" data-bs-toggle="collapse" 
-                                  data-bs-target="#flush-collapsefiliere{{$filiere->id}}" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <div class="accordion-item"style="background-color: transparent;">
+                              <h2 class="accordion-header " id="flush-headingfiliere{{$filiere->id}}">
+                                <button id="btn-accordion" class="accordion-button collapsed  fs-5 p-3 text-drak bg-primary-subtle border border-primary-subtle rounded-3 " type="button" data-bs-toggle="collapse" 
+                                  data-bs-target="#flush-collapsefiliere{{$filiere->id}}" aria-expanded="false" aria-controls="flush-collapseThree"
+                                  style="background-color: #712cf9;background-image: linear-gradient(180deg,#712cf9 10%,#224abe 100%);background-size: cover;">
                                   {{$filiere->intitule}}
                                 </button>
                               </h2>
@@ -63,7 +66,7 @@
                                 @if($formation->categorie->initiale == "DEUST")
                                 <div class="row">
                                   <div class="col-sm-6">
-                                    <table class="table table-info table-bordered border-primary">
+                                    <table class="table table-info table-bordered border-primary ">
                                       <thead>
                                         <tr>
                                           <th scope="col"class="text-center">Semestre 1</th>                                          

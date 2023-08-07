@@ -9,7 +9,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
       <main class="order-1">
-        <div class="row ">
+        <div class="row">
 
           <div class="col-md-2">
           </div>
@@ -37,9 +37,12 @@
               <div class="container">
               <div class="accordion accordion-flush" id="accordionFlushExample">
                 @foreach ($universites as $universite)
-                <div class="accordion-item">
-                  <h2 class="accordion-header " id="flush-heading{{$universite->id}}">
-                    <button class="accordion-button collapsed fs-5 fw-bolder mx-0 text-drak-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-1 " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{$universite->id}}" aria-expanded="false" aria-controls="flush-collapseOne">
+                <div class="accordion-item"style="background-color: transparent;">
+                  <h2 class="accordion-header " id="flush-heading{{$universite->id}}"
+                    >
+                    <button id="btn-accordion" class="accordion-button collapsed fs-5 fw-bolder mx-0  text-drak-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-1" type="button" data-bs-toggle="collapse" 
+                      data-bs-target="#flush-collapse{{$universite->id}}" aria-expanded="false" aria-controls="flush-collapseOne"
+                      style="background-color: #712cf9;background-image: linear-gradient(180deg,#712cf9 10%,#224abe 100%);background-size: cover;">
                       {{$universite->nom." - ".$universite->ville->nom}} 
                     </button>
                   </h2>
@@ -47,7 +50,8 @@
                     <div class="accordion-body">
                       <div class="list-group">
                         @foreach ($universite->etablissements as $etablissement)
-                        <a href="{{url("etablissement/$etablissement->id")}}" class="list-group-item list-group-item-action">
+                        <a href="{{ url($universite->initiale.'/'.generateAcronym($etablissement->nom).'-'.urlencode(Str::slug($etablissement->ville->nom)).''.$etablissement->id.'/formations')}}" 
+                        class="list-group-item list-group-item-action">
                           {{$etablissement->nom." - ".$etablissement->ville->nom}} 
                         </a>
                         @endforeach

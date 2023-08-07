@@ -52,8 +52,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CourSeeder::class);
         $this->call(CoursModulesSeeder::class);
 
-        $this->call(PfeSeeder::class);
-        $this->call(ModulePfeSeeder::class);
+       
 
 
         // \App\Models\User::factory()->create([

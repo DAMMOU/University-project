@@ -57,7 +57,7 @@
                             
                         </div>
                         <hr class="my-4">
-                        <button type="submit" class="w-100 btn btn-primary btn-lg" wire:target='addLine' wire:loading.attr="disabled">
+                        <button id='contact-us-btn' type="submit" class="w-100 btn btn-primary btn-lg" wire:target='addLine' wire:loading.attr="disabled">
                             <div wire:target='addLine' wire:loading class='mr-2'> 
                                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>   
                                 <span>Envoi...</span>  

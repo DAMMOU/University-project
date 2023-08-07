@@ -22,7 +22,7 @@ use App\Http\Livewire\Client\ContactUs;
 use App\Http\Livewire\Client\Cvs;
 use App\Http\Livewire\Client\Exemples;
 use App\Http\Livewire\Client\Universites;
-
+use App\Http\Livewire\Client\Utilisateurs;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -58,14 +58,14 @@ Route::get('/', Accueil::class)->name('accueil');
 Route::get('/universites', Universites::class)->name('universites');
 Route::get('/contact-us', ContactUs::class)->name('contact-us');
 
-Route::get('/etablissement/{id}', ClientEtablissement::class)->name('universites.etablissement');
+Route::get('{universite}/{etablissement}{id}/formations', ClientEtablissement::class)->name('universites.etablissement');
 Route::get('/module/{id}', Module::class);
 Route::get('/exemples/cv/{id}', Cvs::class)->name('exemples.cvs');;
 
 
 Route::get('exemples',Exemples::class)->name('exemples');
 
-
+Route::get('/inscription', Utilisateurs::class)->name('inscription');
 
 Auth::routes();
 

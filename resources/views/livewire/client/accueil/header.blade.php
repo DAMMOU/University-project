@@ -1,4 +1,4 @@
-<header class="navbar navbar-expand-md navbar-dark bd-navbar"style="background-color: #4e73df;background-image: linear-gradient(180deg,#4e73df 10%,#224abe 100%);
+<header class="navbar navbar-expand-md navbar-dark bd-navbar sticky-top"style="background-color: #712cf9;background-image: linear-gradient(180deg,#712cf9 10%,#224abe 100%);
         background-size: cover;">
     <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
         <a class="navbar-brand p-0 me-2" href="/" aria-label="Lafac.ma">
@@ -85,16 +85,18 @@
                         <small class="d-md-none ms-2">Open Collective</small>
                     </a>
                 </li>
+                
             </ul>
             <a class="btn btn-bd-inscription d-lg-inline-block my-2 my-md-0 ms-md-3"
-                href="#">Inscription</a>
+                href="{{route('inscription')}}">Inscription</a>
         </div>
     </nav>
 </header>
+<!--
 <nav class="second-navBar py-2" aria-label="Navigation secondaire">
     <div class="container-xxl d-flex align-items-md-center">
         <form class="bd-search position-relative me-auto">
             <input type="search" class="form-control" id="search-input" placeholder="Rechercher..." aria-label="Search docs for..." autocomplete="off" data-bd-docs-version="5.0">
         </form>
     </div>
-</nav>
+</nav> -->

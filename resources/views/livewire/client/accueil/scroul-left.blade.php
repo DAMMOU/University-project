@@ -6,7 +6,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <p>Try scrolling the rest of the page to see this option in action.</p>
+            <!-- <p> ....</p> -->
             <aside class="bd-sidebar">
         <ul class="list-unstyled mb-0 py-3 pt-md-1">
            @foreach ($universites as $universite)
@@ -21,8 +21,9 @@
                     @foreach ($etablissements as $etablissement)
                         @if ($etablissement->universite_id == $universite->id)                   
                         <li>
-                            <a href='{{url("etablissement/$etablissement->id")}}' class="d-inline-flex align-items-center rounded">
-                            {{$etablissement->nom."-".$etablissement->ville->nom}}
+                            <a href="{{url($universite->initiale.'/'.generateAcronym($etablissement->nom).'-'.urlencode(Str::slug($etablissement->ville->nom)).''.$etablissement->id.'/formations')}}"
+                              class="d-inline-flex align-items-center rounded">
+                              {{$etablissement->nom."-".$etablissement->ville->nom}}
                             </a>
                         </li>
                         @endif

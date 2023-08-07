@@ -3,23 +3,25 @@
     box-sizing: border-box;
 }
 body {
+    
     margin: 0;
-    font-family: var(--bs-font-sans-serif);
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;    
+    -webkit-tap-highlight-color: transparent; 
+   
 }
 
 .bd-navbar {
-    padding: .75rem 0;
-    margin: 0;
-    background-color: #4c0bce; 
+    padding: 0.50rem 0;
+    background-color: transparent;
+    /**background-color: #4c0bce; 
     background-color: #4e73df;background-image: linear-gradient(180deg,#4e73df 10%,#224abe 100%);
-    background-size: cover; 
+    background-size: cover; **/
 }
 
 .active{

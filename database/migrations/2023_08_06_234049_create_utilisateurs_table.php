@@ -13,16 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('pfes', function (Blueprint $table) {
+        Schema::create('utilisateurs', function (Blueprint $table) {
             $table->id();
-            $table->string('label')->nullable();
-            $table->string('path')->nullable();
-            $table->string('domain')->nullable();
-            $table->string('annee')->nullable();
-            $table->string('niveau')->nullable();
+            $table->string('nom')->nullable();
+            $table->string('prenom')->nullable();
+            $table->string('email')->unique();
+            $table->string('je_suis')->nullable();
+            $table->char('sexe')->nullable();
+            $table->char('ville')->nullable();
             $table->timestamps();
         });
-        
     }
 
     /**
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pfes');
+        Schema::dropIfExists('utilisateurs');
     }
 };
