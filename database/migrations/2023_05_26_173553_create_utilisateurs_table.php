@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('je_suis')->nullable();
             $table->char('sexe')->nullable();
-            $table->char('ville')->nullable();
+            $table->foreignId('ville_id');
             $table->timestamps();
         });
     }
@@ -32,6 +32,10 @@ return new class extends Migration
      */
     public function down()
     {
+        Schema::table('utilisateurs',function(Blueprint $table){
+            Schema::disableForeignKeyConstraints();
+            $table->dropForeign(['ville_id']);
+        });
         Schema::dropIfExists('utilisateurs');
     }
 };

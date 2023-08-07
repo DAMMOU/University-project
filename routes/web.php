@@ -15,6 +15,8 @@ use App\Http\Livewire\Admin\Regions;
 use App\Http\Livewire\Admin\Roles;
 use App\Http\Livewire\Admin\TypeEtablissements;
 use App\Http\Livewire\Admin\Cours;
+
+/////////////////////////////// Client ////////////////////////////////////
 use App\Http\Livewire\Client\Accueil;
 use App\Http\Livewire\Client\Etablissement as ClientEtablissement;
 use App\Http\Livewire\Client\Module;
@@ -22,6 +24,7 @@ use App\Http\Livewire\Client\ContactUs;
 use App\Http\Livewire\Client\Cvs;
 use App\Http\Livewire\Client\Exemples;
 use App\Http\Livewire\Client\Universites;
+use App\Http\Livewire\Client\Inscription;
 
 
 use Illuminate\Support\Facades\Auth;
@@ -61,11 +64,13 @@ Route::get('/contact-us', ContactUs::class)->name('contact-us');
 Route::get('/etablissement/{id}', ClientEtablissement::class)->name('universites.etablissement');
 Route::get('/module/{id}', Module::class);
 Route::get('/exemples/cv/{id}', Cvs::class)->name('exemples.cvs');
+
+Route::get('/exemples', Exemples::class)->name('exemples');
 Route::get('/inscription', Inscription::class)->name('inscription');
 
-Route::get('exemples', Exemples::class)->name('exemples');
-
-Route::get('/inscription', Utilisateurs::class)->name('inscription');
+//Route::get('/inscription', function(){
+//    return view('livewire.client.inscriptions.inscription');
+//})->name('inscription');
 
 Auth::routes();
 

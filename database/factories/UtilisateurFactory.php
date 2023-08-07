@@ -22,7 +22,7 @@ class UtilisateurFactory extends Factory
             'prenom' => $this->faker->firstName(),
             'sexe' => fake()->randomElement(['F','M']),
             'email' => fake()->unique()->safeEmail(),
-            'ville' => $this->faker->city(),
+            'ville_id' => rand(1, 10),
             'je_suis' => fake()->randomElement(['Etudiant','Autre']),
         ];
     }

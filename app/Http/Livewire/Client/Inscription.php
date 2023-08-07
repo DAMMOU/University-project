@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Client;
 
 use App\Models\Utilisateur;
+use App\Models\Ville;
 use Livewire\Component;
 
 class Inscription extends Component
@@ -13,7 +14,8 @@ class Inscription extends Component
 
     public function render()
     {
-        return view('livewire.client.inscription.inscription')
+        $villes = Ville::select('id','nom')->get();
+        return view('livewire.client.inscriptions.inscription',compact('villes'))
         ->extends('layouts.accueil')
         ->section('contenu');
     }
@@ -26,13 +28,15 @@ class Inscription extends Component
         'newLine.email' => 'required|email|unique:utilisateurs,email',
         'newLine.ville' => 'required|max:10', 
     ];
-   
+ 
+
+
 
     public function addLine()
     {  
         $validationAttributes = $this->validate();
         Utilisateur::create($validationAttributes['newLine']);
-        
+
         session()->flash('message',"Merci pour votre inscription réussie !");
 
         $this->reset();
