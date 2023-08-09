@@ -27,7 +27,7 @@
                         >Exemples</a>
                 </li>
                 <li class="nav-item col-6 col-md-auto">
-                    <a class="nav-link p-2" href="#"
+                    <a class="nav-link p-2 {{addClass('formations','active')}}" href="{{route('formations')}}"
                   
                         rel="noopener">Formations</a>
                 </li>

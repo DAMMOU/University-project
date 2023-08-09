@@ -20,9 +20,6 @@
    border-color: #7952b3;
    box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.25);
  }
-.bd-search{
-  position:relative;
- }
 
 
 
@@ -116,3 +113,33 @@ aside a:focus {
               background-color: #fff;
               color: #fff;
         }
+
+  
+.fr-search::after{
+  position:absolute;
+  right:.4rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:1.5rem;
+  padding-right:.25rem;
+  padding-left:.25rem;
+  font-size:.75rem;
+  color:#6c757d;
+  border:1px solid #dee2e6;
+  border-radius:.125rem;
+ }
+ @media (max-width: 767.98px) {
+     .fr-search {
+       width: 100%;
+     }
+   }
+
+
+
+
+
+.fr-search .form-control:focus {
+     border-color: #7952b3;
+     box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.25);
+   }

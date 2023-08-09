@@ -1,3 +1,4 @@
+
 body {
     --color-scheme: dark;
     --bs-body-color: #dee2e6;
@@ -60,13 +61,9 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
     
+    
       
-      background-image: linear-gradient(180deg, rgba(33, 37, 41, 0.01), rgba(33, 37, 41, 1) 85%),
-                        radial-gradient(ellipse at top left, rgba(13, 110, 253, 0.5), transparent 50%),
-                        radial-gradient(ellipse at top right, rgba(255, 228, 132, 0.5), transparent 50%),
-                        radial-gradient(ellipse at center right, rgba(112, 44, 249, 0.5), transparent 50%),
-                        radial-gradient(ellipse at center left, rgba(214, 51, 132, 0.5), transparent 50%);
-   
+      
     
 }
 
@@ -413,11 +410,12 @@ body {
         }
 
         #inscription-btn{
-          background-color: #712cf9;background-image: linear-gradient(180deg,#712cf9 10%,#224abe 100%);
-        background-size: cover;
+          background-color: #712cf9;
+          background-image: linear-gradient(180deg,#712cf9 10%,#224abe 100%);
+          background-size: cover;
         }
         #contact-us-btn{
-          background-color: #712cf9;background-image: linear-gradient(180deg,#712cf9 10%,#224abe 100%);
-        background-size: cover;
+          background-color: #712cf9;
+          background-image: linear-gradient(180deg,#712cf9 10%,#224abe 100%);
+          background-size: cover;
         }
-     

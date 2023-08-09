@@ -66,4 +66,3 @@ function generateAcronym($str)
 
 
 
-

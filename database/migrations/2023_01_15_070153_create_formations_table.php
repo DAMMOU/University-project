@@ -15,17 +15,18 @@ return new class extends Migration
     {
         Schema::create('formations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('universite_id');
-            $table->foreignId('etablissement_id');
-            $table->foreignId('type_formation_id');
-            $table->foreignId('categorie_formation_id');
-            $table->integer('niveau')->nullable();
-            $table->string('intitule');
+            $table->string('intitule')->nullable();
             $table->string('initiale')->nullable();
+            $table->integer('niveau')->nullable();
             $table->integer('duree')->nullable();
             $table->string('domaine')->nullable();
             $table->string('desc')->nullable();
             $table->string('etat')->nullable();
+            $table->foreignId('universite_id');
+            $table->foreignId('etablissement_id');
+            $table->foreignId('type_formation_id');
+            $table->foreignId('categorie_formation_id');
+            $table->foreignId('ville_id');
             $table->timestamps();
         });
         Schema::enableForeignKeyConstraints();
@@ -40,7 +41,8 @@ return new class extends Migration
     {
         Schema::table('formations',function(Blueprint $table){
             Schema::disableForeignKeyConstraints();
-            $table->dropForeign(['universite_id','etablissement_id','type_formation_id','categorie_formation_id']);
+            $table->dropForeign(['universite_id','etablissement_id','type_formation_id',
+                                'categorie_formation_id', 'ville_id']);
         });
        
         Schema::dropIfExists('formations');

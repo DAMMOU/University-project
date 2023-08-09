@@ -30,7 +30,7 @@
 
               <div class="accordion accordion-flush" id="accordionFlushExample">
                 
-                <div class="accordion-item">
+                <div class="accordion-item" style="background-color: transparent;">
                   <h2 class="accordion-header " id="flush-heading">
                     <button class="accordion-button collapsed fs-5 fw-bolder mx-0 text-drak-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-1 " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse" aria-expanded="false" aria-controls="flush-collapseOne">
                       Cv exemples
@@ -48,27 +48,27 @@
                           </svg>
                           {{ $exemplesCv->desc }}
                         </a>
-                        <a href ="{{$exemplesCv->chemin}}"
-                          type="button" class="btn btn-success mr-3 " >
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
-                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"></path>
-                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"></path>
-                          </svg>
-                        </a>
-                        <a href ="https://lafac.net/CV_DAMMOU_Youssef.pdf"
-                          type="button" class="btn btn-outline-danger ml-2 "style="margin-left: 10px;" download>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-arrow-down-fill" viewBox="0 0 16 16">
-                            <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zm-1 4v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 11.293V7.5a.5.5 0 0 1 1 0z"></path>
-                          </svg>
-                          <span class="visually-hidden">Button</span>
-                        </a>
+                          <a href ="{{$exemplesCv->chemin}}"
+                            type="button" class="btn btn-success mr-3 " >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                              <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"></path>
+                              <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"></path>
+                            </svg>
+                          </a>
+                          <a href ="https://lafac.net/CV_DAMMOU_Youssef.pdf"
+                            type="button" class="btn btn-outline-danger ml-2 "style="margin-left: 10px;" download>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-arrow-down-fill" viewBox="0 0 16 16">
+                              <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zm-1 4v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 11.293V7.5a.5.5 0 0 1 1 0z"></path>
+                            </svg>
+                            <span class="visually-hidden">Button</span>
+                          </a>
                         </div>
                       @endforeach
                       
                     </div>
                   </div>
                 </div>
-                <div class="accordion-item">
+                <div class="accordion-item"style="background-color: transparent;">
                   <h2 class="accordion-header " id="flush-heading-lettre">
                     <button class="accordion-button collapsed fs-5 fw-bolder mx-0 text-drak-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-lettre" aria-expanded="false" aria-controls="flush-collapseOne-lettre">
                       Lettres de motivations exemples
@@ -106,7 +106,7 @@
                     </div>
                   </div>
 
-                  <div class="accordion-item">
+                  <div class="accordion-item" style="background-color: transparent;">
                   <h2 class="accordion-header " id="flush-heading-transfer">
                     <button class="accordion-button collapsed fs-5 fw-bolder mx-0 text-drak-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-transfer" aria-expanded="false" aria-controls="flush-collapseOne-transfer">
                       Demande de transfert 

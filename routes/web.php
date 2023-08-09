@@ -24,6 +24,7 @@ use App\Http\Livewire\Client\ContactUs;
 use App\Http\Livewire\Client\Cvs;
 use App\Http\Livewire\Client\Exemples;
 use App\Http\Livewire\Client\Universites;
+use App\Http\Livewire\Client\ChercheFormations;
 use App\Http\Livewire\Client\Inscription;
 
 
@@ -61,12 +62,13 @@ Route::get('/', Accueil::class)->name('accueil');
 Route::get('/universites', Universites::class)->name('universites');
 Route::get('/contact-us', ContactUs::class)->name('contact-us');
 
-Route::get('/etablissement/{id}', ClientEtablissement::class)->name('universites.etablissement');
+Route::get('{universite}/{etablissement}{id}/formations', ClientEtablissement::class)->name('universites.etablissement');
 Route::get('/module/{id}', Module::class);
 Route::get('/exemples/cv/{id}', Cvs::class)->name('exemples.cvs');
 
 Route::get('/exemples', Exemples::class)->name('exemples');
 Route::get('/inscription', Inscription::class)->name('inscription');
+Route::get('/formations', ChercheFormations::class)->name('formations');
 
 //Route::get('/inscription', function(){
 //    return view('livewire.client.inscriptions.inscription');

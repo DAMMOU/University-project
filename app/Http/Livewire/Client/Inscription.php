@@ -26,7 +26,7 @@ class Inscription extends Component
         'newLine.sexe' => 'required|max:1',
         'newLine.je_suis' => 'required|max:1',
         'newLine.email' => 'required|email|unique:utilisateurs,email',
-        'newLine.ville' => 'required|max:10', 
+        'newLine.ville_id' => 'required', 
     ];
  
 

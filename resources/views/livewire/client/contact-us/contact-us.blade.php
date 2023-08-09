@@ -35,23 +35,23 @@
                                     </div>
                                 @endif
                             </div>
-                            <label class="form-label">Nom et prénom <span class="text-muted">*</span></label>
+                            <label class="form-label mb-0">Nom et prénom<span class="text-danger">*</span></label>
                             <input type="text"  wire:model="newLine.fullName"  class="form-control @error('newLine.fullName')is-invalid @enderror">
                             @error('newLine.fullName') <span class="text-danger">{{$message}}</span> @enderror 
 
-                            <label  class="form-label">Télephone <span class="text-muted">*</span></label>
+                            <label  class="form-label mb-0">Télephone<span class="text-danger">*</span></label>
                             <input type="text" wire:model="newLine.phone" class="form-control @error('newLine.phone')is-invalid @enderror">
                             @error('newLine.phone') <span class="text-danger">{{$message}}</span> @enderror 
 
-                            <label class="form-label">Sujet <span class="text-muted">*</span></label>
+                            <label class="form-label mb-0">Sujet<span class="text-danger">*</span></label>
                             <input type="text"  wire:model="newLine.subject" class="form-control @error('newLine.subject')is-invalid @enderror">
                             @error('newLine.subject') <span class="text-danger">{{$message}}</span> @enderror 
 
-                            <label  class="form-label ">Email <span class="text-muted">*</span></label>
+                            <label  class="form-label mb-0">Email<span class="text-danger">*</span></label>
                             <input type="email" wire:model="newLine.email" class="form-control @error('newLine.email')is-invalid @enderror" placeholder="you@example.com">
                             @error('newLine.email') <span class="text-danger">{{$message}}</span> @enderror
                             
-                            <label  class="form-label ">Message <span class="text-muted">*</span></label>
+                            <label  class="form-label mb-0">Message<span class="text-danger">*</span></label>
                             <textarea wire:model="newLine.message"class="form-control @error('newLine.message')is-invalid @enderror"  rows="3" ></textarea>  
                             @error('newLine.message') <span class="text-danger">{{$message}}</span> @enderror                         
                             
