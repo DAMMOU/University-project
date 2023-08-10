@@ -23,7 +23,7 @@ class Universite extends Model
         return $this->hasMany(Etablissement::class);
     }
 
-    public function formation(){
-        return $this->hasMany(Etablissement::class,'universite_id','universites');
+    public function formations(){
+        return $this->hasMany(Formation::class);
     }
 }

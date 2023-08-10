@@ -59,7 +59,7 @@
           <p>Search Results: {{count($this->resultats)}} résultats trouvée</p>
           <ul>
               @foreach($this->resultats as $resultat)
-                  <li>{{ $resultat->intitule }}</li>
+                  <li><a href="#">{{ $resultat->intitule }}</a></li>
               @endforeach
           </ul>
         </div>
