@@ -119,7 +119,7 @@ class ModuleSeeder extends Seeder
 
         foreach ($filiereIds as $filiereId) {
             foreach ($sectionIds as $sectionId) {
-                for ($i = 1; $i <= 8; $i++) {
+                for ($i = 1; $i <= 2; $i++) {
                     Module::create([
                         'filiere_id' => $filiereId,
                         'section_id' => $sectionId,

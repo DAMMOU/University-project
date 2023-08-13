@@ -37,6 +37,7 @@ class DatabaseSeeder extends Seeder
         $this->call(EtablissementSeeder::class);
         $this->call(TypeFormationSeeder::class);
         $this->call(CategorieFormationSeeder::class);
+        $this->call(DomaineFormationSeeder::class);
         $this->call(FormationSeeder::class);
         $this->call(FiliereSeeder::class);
         $this->call(SectionSeeder::class);

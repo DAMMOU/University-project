@@ -181,22 +181,22 @@ return [
 
     'attributes' => [
 
-        'newLine.nom' => 'Nom',
-        'newLine.prenom' => 'Prénom',
-        'newLine.genre' => 'Genre',
-        'newLine.je_suis' => 'Statut',
-        'newLine.email' => 'Adresse e-mail',
+        'newLine.nom' => 'nom',
+        'newLine.prenom' => 'prénom',
+        'newLine.genre' => 'genre',
+        'newLine.je_suis' => 'statut',
+        'newLine.email' => 'adresse e-mail',
         'newLine.ville' => 'Ville',  
-        'newLine.sexe' => 'Sexe',  
+        'newLine.sexe' => 'sexe',  
         'newLine.age' => 'âge',  
         "newLine.city" => "ville",
         "newLine.name" => "ville",
         "newLine.address" => "address",
 
 
-        "newLine.fullName" => "Nom et prénom",
-        "newLine.phone" => "Télephone ",
-        "newLine.subject " => "subject",
+        "newLine.fullName" => "nom et prénom",
+        "newLine.phone" => "télephone ",
+        "newLine.subject" => "subject",
         "newLine.message" => "message",
         "newLine.password" => "password",
         "newLine.title" => "title",

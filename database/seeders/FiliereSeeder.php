@@ -27,7 +27,7 @@ class FiliereSeeder extends Seeder
         
         $formations = Formation::all();
         foreach ($formations as $formation) {
-            for ($i = 0; $i < 3; $i++) {
+            for ($i = 0; $i < 2; $i++) {
                 DB::table('filieres')->insert([
                     'intitule' => "Filiere " . ($i + 1),
                     'formation_id' => $formation->id,

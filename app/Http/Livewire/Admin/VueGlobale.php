@@ -19,7 +19,8 @@ use Livewire\Component;
 class VueGlobale extends Component
 {
     public function render()
-    {$universitesCount = ModelsUniversite::count();
+    {
+        $universitesCount = ModelsUniversite::count();
         $usersCount = ModelsUser::count();
         $etablissementsCount = Etablissement::count();
         $villesCount = Ville::count();

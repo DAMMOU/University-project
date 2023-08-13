@@ -13,6 +13,7 @@ class Formation extends Model
         'universite_id',
         'type_formation_id',
         'categorie_formation_id',
+        'domaine_formation_id',
         'niveau',
         'initiale',
         'intitule',
@@ -38,5 +39,11 @@ class Formation extends Model
 
     public function categorie(){
         return $this->belongsTo(CategorieFormation::class,'categorie_formation_id','id');
+    }
+    public function domaine(){
+        return $this->belongsTo(DomaineFormation::class,'domaine_formation_id','id');
+    }
+    public function ville(){
+        return $this->belongsTo(Ville::class);
     }
 }

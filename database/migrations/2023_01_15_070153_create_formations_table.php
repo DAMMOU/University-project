@@ -26,6 +26,7 @@ return new class extends Migration
             $table->foreignId('etablissement_id');
             $table->foreignId('type_formation_id');
             $table->foreignId('categorie_formation_id');
+            $table->foreignId('domaine_formation_id');
             $table->foreignId('ville_id');
             $table->timestamps();
         });
@@ -41,8 +42,10 @@ return new class extends Migration
     {
         Schema::table('formations',function(Blueprint $table){
             Schema::disableForeignKeyConstraints();
-            $table->dropForeign(['universite_id','etablissement_id','type_formation_id',
-                                'categorie_formation_id', 'ville_id']);
+            $table->dropForeign([
+                                'universite_id','etablissement_id','type_formation_id',
+                                'categorie_formation_id', 'ville_id','domaine_formation_id'
+                            ]);
         });
        
         Schema::dropIfExists('formations');
