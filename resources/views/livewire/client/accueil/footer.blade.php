@@ -25,7 +25,7 @@
                     <li class="mb-2"><a href="{{route('accueil')}}">Accueil</a></li>
                     <li class="mb-2"><a href="{{route('universites')}}">Universités</a></li>
                     <li class="mb-2"><a href="{{route('exemples')}}">Exemples</a></li>
-                    <li class="mb-2"><a href="{{route('formations')}}">Formations</a></li>
+                    <li class="mb-2"><a href="{{route('chercher-formations')}}">Formations</a></li>
                     <li class="mb-2"><a href="#">Ecoles</a></li>
                     <li class="mb-2"><a href="#">Concours</a></li>
                     <li class="mb-2"><a href="{{route('exemples')}}">Contactez-nous</a></li>
@@ -34,7 +34,7 @@
                 <div class="col-6 col-lg-2">
                     <h5>Recherche</h5>
                     <ul class="list-unstyled">
-                    <li class="mb-2"><a href="{{route('formations')}}">Formations</a></li>
+                    <li class="mb-2"><a href="{{route('chercher-formations')}}">Formations</a></li>
                     <li class="mb-2"><a href="#">Ecoles</a></li>
                     <li class="mb-2"><a href="#">Modules</a></li>
                     <li class="mb-2"><a href="#">Etablissements</a></li>

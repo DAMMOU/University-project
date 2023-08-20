@@ -28,7 +28,7 @@ class Formation extends Model
         return $this->belongsTo(Etablissement::class);
     }
     public function filieres(){
-        return $this->hasMany(Filiere::class);
+        return $this->hasMany(Filiere::class,'formation_id','id');
     }
     public function universite(){
         return $this->belongsTo(Universite::class);

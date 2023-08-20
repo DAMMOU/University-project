@@ -1,5 +1,17 @@
 
   @extends('layouts.accueil')
+  @section('metadata')
+    <!-- Meta data -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="{{$metadata['author']}}">
+    <meta name="keywords" content="{{$metadata['keywords']}}">
+    <meta name="desciption" content="{{$metadata['description']}}">
+
+    <!-- Title -->
+    <title>{{ $metadata['title'] }}</title>
+  @endsection
+
   @section('contenu')
         <div class="bd-masthead" id="content">
             <div class="container-xxl bd-gutter">
@@ -60,7 +72,7 @@
             </div>
         </div>
         @include('livewire.client.accueil.scroul-left')
-@endsection
+  @endsection
 
  
 

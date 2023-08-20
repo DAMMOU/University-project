@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\LocaleController;
 use App\Http\Livewire\Admin\CategorieEtablissements;
 use App\Http\Livewire\Admin\Etablissements;
 use App\Http\Livewire\Admin\Filieres;
@@ -25,7 +25,9 @@ use App\Http\Livewire\Client\Cvs;
 use App\Http\Livewire\Client\Exemples;
 use App\Http\Livewire\Client\Universites;
 use App\Http\Livewire\Client\ChercheFormations;
+use App\Http\Livewire\Client\Formation as ClientFormation ;
 use App\Http\Livewire\Client\Inscription;
+use App\Http\Livewire\Client\Shopping;
 
 
 use Illuminate\Support\Facades\Auth;
@@ -57,7 +59,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-
+// FRONTEND ROUTES
 Route::get('/', Accueil::class)->name('accueil');
 Route::get('/universites', Universites::class)->name('universites');
 Route::get('/contact-us', ContactUs::class)->name('contact-us');
@@ -68,11 +70,23 @@ Route::get('/exemples/cv/{id}', Cvs::class)->name('exemples.cvs');
 
 Route::get('/exemples', Exemples::class)->name('exemples');
 Route::get('/inscription', Inscription::class)->name('inscription');
-Route::get('/formations', ChercheFormations::class)->name('formations');
+Route::get('/chercher-formations', ChercheFormations::class)->name('chercher-formations');
+Route::get('{universite}/{etablissement}/formations/{id}/{intitule}', ClientFormation::class)->name('formations');
 
-//Route::get('/inscription', function(){
-//    return view('livewire.client.inscriptions.inscription');
-//})->name('inscription');
+
+// LOCALE ROUTE
+Route::get('locale/{lang}',[LocaleController::class, 'language'])->name('locale');
+
+// SHOPPING ROUTES
+Route::middleware(['web'])->group(function () {
+    Route::get('/lafacStore', Shopping::class)->name('shopping');
+    Route::get('/products', [Shopping::class, 'products'])->name('products');
+    Route::get('/product-details', [Shopping::class, 'productDetails'])->name('productDetails');
+    Route::get('/account', [Shopping::class, 'account'])->name('account');
+    Route::get('/contact', [Shopping::class, 'contact'])->name('contact');
+    Route::get('/cart', [Shopping::class, 'cart'])->name('cart');
+});
+
 
 Auth::routes();
 

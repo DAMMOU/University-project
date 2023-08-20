@@ -15,35 +15,44 @@
         <div class="collapse navbar-collapse" id="bdNavbar">
             <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
                 <li class="nav-item col-6 col-md-auto">
-                    <a class="nav-link p-2 {{active('accueil')}}" aria-current="page" href="{{route('accueil')}}"
-                        onclick="">Accueil</a>
+                    <a class="nav-link p-2 {{active('accueil')}}" aria-current="page" href="{{route('accueil')}}">
+                        {{__('Home')}}
+                    </a>
                 </li>
                 <li class="nav-item col-6 col-md-auto">
-                    <a class="nav-link p-2 {{addClass('universites','active')}}" href="{{route('universites')}}"
-                      >Universités</a>
+                    <a class="nav-link p-2 {{addClass('universites','active')}}" href="{{route('universites')}}">
+                        {{__('Universities')}}</a>
                 </li>
                 <li class="nav-item col-6 col-md-auto {{addClass('exemples','active')}}">
-                    <a class="nav-link p-2" href="{{route('exemples')}}"
-                        >Exemples</a>
+                    <a class="nav-link p-2" href="{{route('exemples')}}">
+                        {{__('Examples')}}
+                    </a>
                 </li>
                 <li class="nav-item col-6 col-md-auto">
-                    <a class="nav-link p-2 {{addClass('formations','active')}}" href="{{route('formations')}}"
-                  
-                        rel="noopener">Formations</a>
+                    <a class="nav-link p-2 {{addClass('chercher-formations','active')}}" href="{{route('chercher-formations')}}">
+                        {{__('Programs')}}
+                    </a>
                 </li>
                 <li class="nav-item col-6 col-md-auto">
-                    <a class="nav-link p-2" href="#"
-                      
-                        rel="noopener">Ecoles</a>
+                    <a class="nav-link p-2" href="#">
+                        {{__('Schools')}}
+                    </a>
                 </li>
                 <li class="nav-item col-6 col-md-auto">
-                    <a class="nav-link p-2 {{active('contact-us')}}" href="{{route('contact-us')}}"
-                        
-                        rel="noopener">Contactez-nous</a>
+                    <a class="nav-link p-2 {{active('contact-us')}}" href="{{route('contact-us')}}">
+                        {{__('Contact')}}
+                    </a>
+                </li>
+                <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link p-2 {{active('shopping')}}" href="{{route('shopping')}}" rel="noopener">
+                        {{__('Shopping')}}
+                    </a>
                 </li>
             </ul>
+            
             <hr class="d-md-none text-white-50">
             <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+         
                 <li class="nav-item col-6 col-md-auto">
                     <a class="nav-link p-2" href="#" target="_blank" rel="noopener">
                         <svg xmlns="#" width="36" height="36"
@@ -88,7 +97,22 @@
                 
             </ul>
             <a class="btn btn-bd-inscription d-lg-inline-block my-2 my-md-0 ms-md-3"
-                href="{{route('inscription')}}">Inscription</a>
+                href="{{route('inscription')}}">
+                {{__('Sign up')}}
+            </a>
+            <div class="dropdown" style="margin-left:10px;">    
+                <a class="btn dropdown-toggle mr-3 btn-bd-inscription" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-translate"></i>
+                  {{App::getLocale()}}
+                </a>
+                <ul class="dropdown-menu">
+                    @foreach ( Config::get('locale') as $lang => $language )
+                        @if($lang != App::getLocale())
+                            <li><a class="dropdown-item" href="{{route('locale', $lang)}}">{{$language['display']}}</a></li>
+                        @endif
+                    @endforeach
+                </ul>
+            </div>
         </div>
     </nav>
 </header>

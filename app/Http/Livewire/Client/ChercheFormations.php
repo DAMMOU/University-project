@@ -11,7 +11,7 @@ use Livewire\Component;
 
 class ChercheFormations extends Component
 {
-    public $query ="LST mathematiques Rabat";
+    public $query ="DUG mathematiques Rabat";
     public $formations = [];
     public $resultats = [];
     public $resultatsPlusMoinsOptions;
@@ -20,7 +20,8 @@ class ChercheFormations extends Component
                         'typeEtab'=>'',  
                         'domaine'=>'',  
                         'ville'=>'',  
-                        'niveau'=>'', ];
+                        'niveau'=>'', 
+                    ];
 
  
     protected $rules = [
@@ -38,7 +39,7 @@ class ChercheFormations extends Component
         }
        
 
-        return view('livewire.client.formations.formations',[
+        return view('livewire.client.formations.chercher-formations',[
         
             'universites' => Universite::select('id','nom','ville_id')->get(),
             'domaines' => DomaineFormation::select('id','intitule')->get(),
