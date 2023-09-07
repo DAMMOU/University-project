@@ -1,3 +1,6 @@
+@php
+    $isArabicLocale = App::getLocale() == 'ar' ? true : false;
+@endphp  
 <!doctype htm >
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
   <head>
@@ -29,15 +32,20 @@
 
         gtag('config', 'UA-255498841-1');
     </script>
-    
-    @livewireStyles
-  </head>
-  
-  <body style="background-image: linear-gradient(180deg, rgba(33, 37, 41, 0.01), rgba(33, 37, 41, 1) 85%),
+    <style>
+      body{
+        background-image: linear-gradient(180deg, rgba(33, 37, 41, 0.01), rgba(33, 37, 41, 1) 85%),
                         radial-gradient(ellipse at top left, rgba(13, 110, 253, 0.5), transparent 50%),
                         radial-gradient(ellipse at top right, rgba(255, 228, 132, 0.5), transparent 50%),
                         radial-gradient(ellipse at center right, rgba(112, 44, 249, 0.5), transparent 50%),
-                        radial-gradient(ellipse at center left, rgba(214, 51, 132, 0.5), transparent 50%);">
+                        radial-gradient(ellipse at center left, rgba(214, 51, 132, 0.5), transparent 50%);
+      }
+    </style>
+    
+    @livewireStyles
+  </head>
+
+  <body>
     @include('livewire.client.accueil.header')
     @yield('contenu')  
     @include('livewire.client.accueil.footer')

@@ -11,11 +11,9 @@
           <div class="col-md-8">
             <div class="pt-2 ps-lg-2">
               <div class="">
-                <h1 class="bd-title mb-1">
+                <h1 class="bd-title mb-4">
                   Module: {{$this->module->intitule}}
                 </h1>
-
-            
              </div> 
               <h3>
                 {{$this->module->filiere->intitule}}
@@ -23,7 +21,7 @@
               <h5>
                 {{$this->module->filiere->etablissement->nom .' - '.$this->module->filiere->etablissement->ville->nom}}
               </h5>
-                <p class="mt-1 lh-lg mb-3 fw-semibold">
+                <p class="mt-1 lh-lg fw-semibold invisible">
                  Sur cette page, vous trouverez des informations sur les différents cours du module 
                  <span class ="text-danger fs-5 ">{{$this->module->intitule}}</span>, ainsi que des ressources utiles 
                  pour vous aider à réussir vos travaux dirigés, pratiques, examens et tests de connaissance. N'hésitez pas à explorer 
@@ -31,7 +29,7 @@
                 </p>
 
             </div>
-            <div class="container">
+            <div class="container" style = "margin-bottom:100px; margin-top:-50px;">
 
               <div class="accordion accordion-flush" id="accordionFlushExample">
                 

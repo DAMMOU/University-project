@@ -18,8 +18,6 @@
           <div class="col-md-2">
           </div>
   
-
-
           <div class="col-md-8 ">
             <div class="pt-2 ps-lg-2">
               <div class="">
@@ -41,40 +39,42 @@
               <div class="container">
               <div class="accordion accordion-flush" id="accordionFlushExample">
                 @foreach ($universites as $universite)
+                  @php
+                     $univTranslationKey = $universite->initiale;
+                     $etablissements = $universite->etablissements
+                  @endphp
                 <div class="accordion-item"style="background-color: transparent;">
-                  <h2 class="accordion-header " id="flush-heading{{$universite->id}}"
-                    >
+                  <h2 class="accordion-header " id="flush-heading{{$universite->id}}">
                     <button id="btn-accordion" class="accordion-button collapsed fs-5 fw-bolder mx-0  text-drak-emphasis bg-primary-subtle border border-primary-subtle rounded-3 m-1" type="button" data-bs-toggle="collapse" 
                       data-bs-target="#flush-collapse{{$universite->id}}" aria-expanded="false" aria-controls="flush-collapseOne"
                       style="background-color: #712cf9;background-image: linear-gradient(180deg,#712cf9 10%,#224abe 100%);background-size: cover;">
-                      {{$universite->nom." - ".$universite->ville->nom}} 
+                      {{ __($univTranslationKey) }}
                     </button>
                   </h2>
                   <div id="flush-collapse{{$universite->id}}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{$universite->id}}" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                       <div class="list-group">
                         @foreach ($universite->etablissements as $etablissement)
-                        <a href="{{url($universite->initiale.'/'.generateAcronym($etablissement->nom).'-'.urlencode(Str::slug($etablissement->ville->nom)).''.$etablissement->id.'/formations')}}" 
-                          class="list-group-item list-group-item-action">
-                          {{$etablissement->nom." - ".$etablissement->ville->nom}} 
-                        </a>
+                        @php
+                          $etablishmentTransKey  = generateAcronym($etablissement->nom);
+                        @endphp
+                          <a href="{{url($universite->initiale.'/'.generateAcronym($etablissement->nom).'-'.urlencode(Str::slug($etablissement->ville->nom)).''.$etablissement->id.'/formations')}}" 
+                            class="list-group-item list-group-item-action">
+                            {{ __($etablishmentTransKey) }}
+                          </a>
                         @endforeach
                       </div>
                     </div>
                   </div>
                 </div>
                 @endforeach
-             
-               
               </div>
             </div>
           </div>
 
-           
-          
-          
           <div class="col-md-2">
           </div>
+
         </div> 
       </main>
     </div>

@@ -8,46 +8,39 @@
                     </a>
                     <ul class="list-unstyled small">
                         <li class="mb-2">
-                            Education au Maroc est puls facile que jamais avec Lafac.net
-                            <a href="#">Lafac.net</a>
-                            <a href="#"></a>
+                            {{__("Education in Morocco is easier than ever")}}
                         </li>
                         <li class="mb-2">
-                        Notre site regroupe toutes les universités marocaines et ses établissements, ne ratez pas cette occasion
+                            {{__("Our website gathers all Moroccan universities and their institutions, don't miss this opportunity")}}
+                        
                         <a href="#" target="_blank" rel="license noopener"></a>.
                         </li>
                         <li class="mb-2"></li>
                     </ul>
                 </div>
                 <div class="col-6 col-lg-2 offset-lg-1">
-                    <h5>Liens</h5>
+                    <h5>{{__('Links')}}</h5>
                     <ul class="list-unstyled">
-                    <li class="mb-2"><a href="{{route('accueil')}}">Accueil</a></li>
-                    <li class="mb-2"><a href="{{route('universites')}}">Universités</a></li>
-                    <li class="mb-2"><a href="{{route('exemples')}}">Exemples</a></li>
-                    <li class="mb-2"><a href="{{route('chercher-formations')}}">Formations</a></li>
-                    <li class="mb-2"><a href="#">Ecoles</a></li>
-                    <li class="mb-2"><a href="#">Concours</a></li>
-                    <li class="mb-2"><a href="{{route('exemples')}}">Contactez-nous</a></li>
+                    <li class="mb-2"><a href="{{route('accueil')}}">{{__('Home')}}</a></li>
+                    <li class="mb-2"><a href="{{route('universites')}}">{{__('Universities')}}</a></li>
+                    <li class="mb-2"><a href="{{route('exemples')}}">{{__('Examples')}}</a></li>
+                    <li class="mb-2"><a href="{{route('chercher-formations')}}">{{__('Programs')}}</a></li>
+                    
                     </ul>
                 </div>
                 <div class="col-6 col-lg-2">
-                    <h5>Recherche</h5>
+                    <h5>{{__('Links')}}</h5>
                     <ul class="list-unstyled">
-                    <li class="mb-2"><a href="{{route('chercher-formations')}}">Formations</a></li>
-                    <li class="mb-2"><a href="#">Ecoles</a></li>
-                    <li class="mb-2"><a href="#">Modules</a></li>
-                    <li class="mb-2"><a href="#">Etablissements</a></li>
-                    <li class="mb-2"><a href="#">Exemples</a></li>
+                    <li class="mb-2"><a href="#">{{__('Contact')}}</a></li>
+                    <li class="mb-2"><a href="#">{{__('Schools')}}</a></li>
+                    <li class="mb-2"><a href="#">{{__('Shopping')}}</a></li>
                     </ul>
                 </div>
                 
                 <div class="col-6 col-lg-2">
-                    <h5>Communauté</h5>
+                    <h5>{{__('Community')}}</h5>
                     <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#">Questions</a></li>
-                    <li class="mb-2"><a href="#">Discussions</a></li>
-                    <li class="mb-2"><a href="{{route('contact-us')}}">Contactez-nous</a></li>
+                    <li class="mb-2"><a href="{{route('contact-us')}}">{{__('Contact')}}</a></li>
                     </ul>
                 </div>
             </div>

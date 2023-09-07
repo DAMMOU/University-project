@@ -13,7 +13,7 @@
             </svg>
         </button>
         <div class="collapse navbar-collapse" id="bdNavbar">
-            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0  @if($isArabicLocale) losue @endif">
                 <li class="nav-item col-6 col-md-auto">
                     <a class="nav-link p-2 {{active('accueil')}}" aria-current="page" href="{{route('accueil')}}">
                         {{__('Home')}}
@@ -23,38 +23,37 @@
                     <a class="nav-link p-2 {{addClass('universites','active')}}" href="{{route('universites')}}">
                         {{__('Universities')}}</a>
                 </li>
-                <li class="nav-item col-6 col-md-auto {{addClass('exemples','active')}}">
-                    <a class="nav-link p-2" href="{{route('exemples')}}">
-                        {{__('Examples')}}
-                    </a>
-                </li>
                 <li class="nav-item col-6 col-md-auto">
                     <a class="nav-link p-2 {{addClass('chercher-formations','active')}}" href="{{route('chercher-formations')}}">
                         {{__('Programs')}}
                     </a>
                 </li>
-                <li class="nav-item col-6 col-md-auto">
-                    <a class="nav-link p-2" href="#">
-                        {{__('Schools')}}
+                <li class="nav-item col-6 col-md-auto {{addClass('exemples','active')}}">
+                    <a class="nav-link p-2" href="{{route('exemples')}}">
+                        {{__('Tools')}}
                     </a>
                 </li>
                 <li class="nav-item col-6 col-md-auto">
-                    <a class="nav-link p-2 {{active('contact-us')}}" href="{{route('contact-us')}}">
-                        {{__('Contact')}}
+                    <a class="nav-link p-2" href="{{ route('contact-us')}} "  rel="noopener">
+                        {{__('Contact')}} 
                     </a>
                 </li>
                 <li class="nav-item col-6 col-md-auto">
-                    <a class="nav-link p-2 {{active('shopping')}}" href="{{route('shopping')}}" rel="noopener">
+                    <a class="nav-link p-2" href="{{route('lafac-store')}}" rel="noopener">
                         {{__('Shopping')}}
+                    
                     </a>
                 </li>
+                <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto mx-2">
+                    <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white "></div>
+                    <hr class="d-lg-none my-2 text-white-50">
+                 </li> 
             </ul>
             
             <hr class="d-md-none text-white-50">
             <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
-         
-                <li class="nav-item col-6 col-md-auto">
-                    <a class="nav-link p-2" href="#" target="_blank" rel="noopener">
+                <li class="nav-item col-6 col-md-auto mt-1">
+                    <a class="nav-link p-2" href="#"  rel="noopener">
                         <svg xmlns="#" width="36" height="36"
                             class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 416.32"
                             role="img">
@@ -64,9 +63,9 @@
                         </svg>
                         <small class="d-md-none ms-2">Twitter</small>
                     </a>
-                </li>
-                <li class="nav-item col-6 col-md-auto">
-                    <a class="nav-link p-2" href="#" target="_blank"
+                </li> 
+                <li class="nav-item col-6 col-md-auto mt-1">
+                    <a class="nav-link p-2" href="#" 
                         rel="noopener">
                         <svg xmlns="#" width="36" height="36"
                             class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 512" role="img">
@@ -79,22 +78,20 @@
                         <small class="d-md-none ms-2">Slack</small>
                     </a>
                 </li>
-                <li class="nav-item col-6 col-md-auto">
-                    <a class="nav-link p-2" href="#" target="_blank"
+                <li class="nav-item col-6 col-md-auto mt-1">
+                    <a class="nav-link p-2" href="#" 
                         rel="noopener">
-                        <svg xmlns="#" width="36" height="36" fill="currentColor"
-                            fill-rule="evenodd" class="navbar-nav-svg d-inline-block align-text-top"
-                            viewBox="0 0 40 41" role="img">
-                            <title>Open Collective</title>
-                            <path fill-opacity=".4"
-                                d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z" />
-                            <path
-                                d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z" />
+                        <svg xmlns="#" width="36" height="36"
+                            class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 512" role="img">
+                            <title>Slack</title>
+                            <path fill="currentColor"
+                                d="M210.787 234.832l68.31-22.883 22.1 65.977-68.309 22.882z" />
+                            <path fill="currentColor"
+                                d="M490.54 185.6C437.7 9.59 361.6-31.34 185.6 21.46S-31.3 150.4 21.46 326.4 150.4 543.3 326.4 490.54 543.34 361.6 490.54 185.6zM401.7 299.8l-33.15 11.05 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.38-68.36 22.92 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.43-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.5-13.92 2.87-29.06 16.78-33.56l33.12-11.03-22.1-65.9-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.48-13.93 2.89-29.07 16.81-33.58l33.15-11.05-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.46 34.38 68.36-22.92-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.47 34.42 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.87 29.06-16.78 33.56L329.7 194.6l22.1 65.9 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.88 29.07-16.81 33.57z" />
                         </svg>
-                        <small class="d-md-none ms-2">Open Collective</small>
+                        <small class="d-md-none ms-2">Slack</small>
                     </a>
                 </li>
-                
             </ul>
             <a class="btn btn-bd-inscription d-lg-inline-block my-2 my-md-0 ms-md-3"
                 href="{{route('inscription')}}">

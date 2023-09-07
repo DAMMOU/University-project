@@ -1,5 +1,6 @@
 <?php
 
+/////////////////////////////// Admin ////////////////////////////////////
 use App\Http\Controllers\LocaleController;
 use App\Http\Livewire\Admin\CategorieEtablissements;
 use App\Http\Livewire\Admin\Etablissements;
@@ -27,7 +28,9 @@ use App\Http\Livewire\Client\Universites;
 use App\Http\Livewire\Client\ChercheFormations;
 use App\Http\Livewire\Client\Formation as ClientFormation ;
 use App\Http\Livewire\Client\Inscription;
-use App\Http\Livewire\Client\Shopping;
+
+/////////////////////////////// Lafacstore ////////////////////////////////////
+use App\Http\Livewire\Lafacstore\Lafacstore;
 
 
 use Illuminate\Support\Facades\Auth;
@@ -43,20 +46,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//Route::get('/e', function(){
-//    return view('etablissements');
-//})->name('welcome');
-//Route::get('/', function(){
-//    $universites = ModelsUniversite::get(['id','nom','ville_id']);
-//    $etablissements = Etablissement::get(['id','nom','ville_id','universite_id']);
-//    return view('accueil.welcome',compact('universites','etablissements'));
-//})->name('welcome');
-////Route::get('/accueil', Accueil::class)->name('accueil');
-
-
-  
-
-
 
 
 // FRONTEND ROUTES
@@ -77,14 +66,9 @@ Route::get('{universite}/{etablissement}/formations/{id}/{intitule}', ClientForm
 // LOCALE ROUTE
 Route::get('locale/{lang}',[LocaleController::class, 'language'])->name('locale');
 
-// SHOPPING ROUTES
+// Lafacstore ROUTES
 Route::middleware(['web'])->group(function () {
-    Route::get('/lafacStore', Shopping::class)->name('shopping');
-    Route::get('/products', [Shopping::class, 'products'])->name('products');
-    Route::get('/product-details', [Shopping::class, 'productDetails'])->name('productDetails');
-    Route::get('/account', [Shopping::class, 'account'])->name('account');
-    Route::get('/contact', [Shopping::class, 'contact'])->name('contact');
-    Route::get('/cart', [Shopping::class, 'cart'])->name('cart');
+    Route::get('/lafacStore', Lafacstore::class)->name('lafac-store');
 });
 
 
@@ -95,7 +79,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
  /// Le groupe des routes relative aux uniquement superadmins  
- Route::group([
+Route::group([
     'middleware' => ['auth', 'auth.superadmin'],
     'as' => 'superadmin.'
     ],function(){
@@ -107,15 +91,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
                 Route::get('/roles', Roles::class)->name('roles.index')->middleware('auth.superadmin');
                 Route::get('/permissions', Permissions::class)->name('permissions.index')->middleware('auth.superadmin');
                 
-            });
-            Route::group([
+        });
+        Route::group([
                 'prefix' => 'dashboard',
                 'as' => 'dashboard.',
                 ], function(){
                     Route::get('/vue-globale', VueGlobale::class)->name('vue-globale')->middleware('auth.superadmin');
                 });
-
-
         Route::group([
             'prefix' => 'gestions',
             'as' => 'gestions.',
@@ -125,7 +107,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
                 Route::get('/universites', Universite::class)->name('universites.index')->middleware('auth.superadmin');
                 Route::get('etablissements/types', TypeEtablissements::class)->name('etablissements.types.index')->middleware('auth.superadmin');
                 Route::get('etablissements/categories', CategorieEtablissements::class)->name('etablissements.categories.index')->middleware('auth.superadmin');
-                
                 Route::get('/etablissements', Etablissements::class)->name('etablissements.index')->middleware('auth.superadmin');
                 Route::get('/formations', Formations::class)->name('formations.index')->middleware('auth.superadmin');
                 Route::get('/filieres', Filieres::class)->name('filieres.index')->middleware('auth.superadmin');
@@ -135,8 +116,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
                 Route::get('/td', Exemples::class)->name('td.index')->middleware('auth.superadmin');
                 Route::get('/tp', Exemples::class)->name('tp.index')->middleware('auth.superadmin');
 
-            });
     });
+});
 
 //Route::get('/habilitations/utilisateurs', [App\Http\Controllers\UserController::class,'index'])
 //        ->name('utilisateurs')
