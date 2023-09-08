@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family:'Poppins', sans-serif;
+  color: white;
+}
+body{
+  background-color: #232323;
+  overflow-x: hidden;
+}
+.navbar{
+  padding: 15px 18px !important;
+  width: 100%;
+}
+.logo{
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.848) !important;
+}
+.nav-item{
+  margin: 0px 10px;
+}
+.nav-item .nav-link{
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 14px;
+  font-weight: 500; 
+}
+.btn-cart{
+  display: inline-block;
+  color: white;
+  font-size: 14px;
+  font-weight: 600; 
+}
+.offcanvas{
+  margin-right: 10px;
+}
+.home-heading{
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 74px;
+
+}
+.para-home{
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.42);
+  max-width: 400px;
+  margin: 14px 0px;
+}
+.home-links{
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px, solid rgb(63, 193, 255);
+  background-color: rgb(63, 193, 255);
+  margin: 20px 0px;
+  margin-right: 7px;
+  border-radius: 50px;
+  padding: 10px 37px;
+  font-size: 14px;
+  font-weight: 600;
+
+}
+
+
+
+/* About Section CSS*/
+.heading-about{
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: rgb(255, 123, 57);
+    margin: 10px 0px;
+    margin-bottom: 34px;
+}
+
+.para-about{
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.695);
+    line-height: 21px;
+    margin: 25px 0px;
+}
+.link-about{
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 129, 57);
+    color: rgba(255, 129, 57);
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 8px 22px;
+    position: relative;
+    z-index: 22;
+}
+.span-about{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: rgb(255, 129, 57);
+  width: 0%;
+  height: 100%;
+  z-index: -1;
+  transition: 0.4s ease-in;
+}
+.link-about:hover .span-about{
+  width: 100%;
+}
+
+.fa-arrow-right{
+  color: rgb(255, 123, 57);
+  font-size: 11px;
+  margin-left: 5px;
+}
+.link-about:hover .fa-arrow-right {
+  color: white; 
+}
+
+.link-about:hover {
+  color: white;
+}
+
+
+.input-group{
+
+  height: 50px;
+  background-color: #232323;
+ 
+}
+

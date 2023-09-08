@@ -29,8 +29,8 @@ use App\Http\Livewire\Client\ChercheFormations;
 use App\Http\Livewire\Client\Formation as ClientFormation ;
 use App\Http\Livewire\Client\Inscription;
 
-/////////////////////////////// Lafacstore ////////////////////////////////////
-use App\Http\Livewire\Lafacstore\Lafacstore;
+/////////////////////////////// __Lafac_Store__ ////////////////////////////////////
+use App\Http\Livewire\Lafacstore\LafacStore;
 
 
 use Illuminate\Support\Facades\Auth;
@@ -68,7 +68,7 @@ Route::get('locale/{lang}',[LocaleController::class, 'language'])->name('locale'
 
 // Lafacstore ROUTES
 Route::middleware(['web'])->group(function () {
-    Route::get('/lafacStore', Lafacstore::class)->name('lafac-store');
+    Route::get('/lafacStore', LafacStore::class)->name('lafac-store');
 });
 
 

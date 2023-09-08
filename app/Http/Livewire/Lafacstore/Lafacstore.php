@@ -4,7 +4,7 @@ namespace App\Http\Livewire\Lafacstore;
 
 use Livewire\Component;
 
-class Lafacstore extends Component
+class LafacStore extends Component
 {   
     /**
     * Rend la vue Livewire pour la page d'index de lafascstore.

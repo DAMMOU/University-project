@@ -7,8 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
         <!-- Bootstrap CSS v5.2.1 -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-        
-        @stack('css')
+        <link href="{{asset('lafac-store/css/style.css')}}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
         @livewireStyles
     </head>
 
@@ -19,8 +20,9 @@
         <main>
             @yield('main')
         </main>
+        
         <footer>
-            <!-- place footer here -->
+            @include('livewire.Lafacstore.footer')
         </footer>
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
