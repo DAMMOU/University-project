@@ -57,18 +57,17 @@
   </div>
 </nav>
 
-<div class="container text-center">
+<div class="container">
   <div class="row row-cols-sm-2 row-cols-md-2">
     <div class="col">
       <img src="{{asset('lafac-store/img/students.png')}}" class="img-fluid" alt="header img">
     </div>
     <div class="col">
-        <h1 class="home-heading mt-4"> 
+        <h1 class="home-heading mt-4 text-center"> 
           {{__('Give your studies a')}} 
           <span class="home-span">{{__(' fresh style!')}}</span>
         </h1>
         <p class="para-home">
-          {{__('Discover a wide array of exclusive offers tailored specifically for students to explore!')}}
           {{__('Discover a wide array of exclusive offers tailored specifically for students to explore!')}}
         </p>
         <div class="btn-home">
