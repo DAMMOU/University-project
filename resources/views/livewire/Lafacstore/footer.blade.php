@@ -1,10 +1,5 @@
-<div class="container justify-content-center">
-    <form class="">
-    @csrf
-        <div class="input-group mb-3 mt-3">
-            <span class="input-group-text" id="basic-addon1">@</span>
-            <input type="text" class="form-control bg-black" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-             <button class="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>
-        </div>
-    </form>
-</div>
+<footer class="footer mt-0">
+   <div class="mt-4 mb-3">
+     <p class="p-footer">© 2022-2023, lafac.net - Tous droits réservés</p>
+   </div>
+ </footer>
