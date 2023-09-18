@@ -58,7 +58,7 @@
                         @php
                           $etablishmentTransKey  = generateAcronym($etablissement->nom);
                         @endphp
-                          <a href="{{url($universite->initiale.'/'.generateAcronym($etablissement->nom).'-'.urlencode(Str::slug($etablissement->ville->nom)).''.$etablissement->id.'/formations')}}" 
+                          <a href="{{url($universite->initiale.'/'.generateAcronym($etablissement->nom).'-'.urlencode(Str::slug($etablissement->ville->nom)).'-'.$etablissement->id.'/formations')}}" 
                             class="list-group-item list-group-item-action">
                             {{ __($etablishmentTransKey) }}
                           </a>

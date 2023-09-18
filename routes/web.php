@@ -2,6 +2,7 @@
 
 /////////////////////////////// Admin ////////////////////////////////////
 use App\Http\Controllers\LocaleController;
+use App\Http\Controllers\RestApi;
 use App\Http\Livewire\Admin\CategorieEtablissements;
 use App\Http\Livewire\Admin\Etablissements;
 use App\Http\Livewire\Admin\Filieres;
@@ -53,7 +54,7 @@ Route::get('/', Accueil::class)->name('accueil');
 Route::get('/universites', Universites::class)->name('universites');
 Route::get('/contact-us', ContactUs::class)->name('contact-us');
 
-Route::get('{universite}/{etablissement}{id}/formations', ClientEtablissement::class)->name('universites.etablissement');
+Route::get('{universite}/{etablissement}/formations', ClientEtablissement::class)->name('universites.etablissement');
 Route::get('/module/{id}', Module::class);
 Route::get('/exemples/cv/{id}', Cvs::class)->name('exemples.cvs');
 

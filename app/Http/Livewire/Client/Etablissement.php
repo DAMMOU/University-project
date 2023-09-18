@@ -18,11 +18,14 @@ class Etablissement extends Component
                 ->extends('layouts.accueil')
                 ->section('contenu');
     }
-    public function mount($id)
+    public function mount($etablissement)
     {
-        $this->etablissement = ModelsEtablissement::find($id);
+        $words = explode("-", $etablissement);
+        //dd($words);
+        $this->etablissement = ModelsEtablissement::find($words[2]);
         $this->formations = $this->etablissement->formations;
         
     }
+    
 
 }

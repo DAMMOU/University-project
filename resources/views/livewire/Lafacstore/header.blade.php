@@ -40,22 +40,34 @@
 
 
 
-  <div class="row">
+  <div class="row section1">
     <div class="col-md-6 order-md-2">
-      <img src="{{ asset('lafac-store/img_section1.png') }}" style="width: 100%; height: 100%;" />
+      <img src="{{ asset('lafac-store/img_section1.png') }}" class="card-img-top" />
     </div>
     <div class="col-md-6 order-md-1">
-      <!-- Contenu de la deuxième colonne -->
+        <h1 class="mt-4 ms-3 mb-4 text-light">
+            <p>Découvrez notre large sélection de matériels informatiques</p>
+        </h1>
+       
+    </div>
+  </div>
+  <div class="card text-center ">
+    <div class="card-body">
+      <h5 class="card-title mt-4">{{('Vos besoins en matériels informatiques, nos solutions')}}</h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+        Some quick example text to build on the card title and make up the bulk of the card's content.
+      </p>
     </div>
   </div>
 
-  <div class=" bloc_section_final">
+  <div class="bloc_section_final">
       <div class="container w-100 text-center">
         <div class="p_block_secetion_final">
-          <p>{{__('Profitez des avantages Amazon Business')}}</p>
+          <p>{{__('Profitez des avantages Lafac store')}}</p>
         </div>
         <div class="mt-0">
-          <a class="rounded-0 btn_block_secetion_final" data-action-block-btn="Créer un compte gratuit" aria-label="Créer un compte gratuit " href="#" style="height: 48px;">
+          <a class="rounded-0 btn_block_secetion_final " data-action-block-btn="Créer un compte gratuit" aria-label="Créer un compte gratuit " href="#" style="height: 48px;">
             {{__('Créer un compte gratuit')}}
           </a>
         </div>
@@ -65,7 +77,6 @@
 
 
  
-
 
 
 
