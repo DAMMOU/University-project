@@ -1,4 +1,4 @@
-<div class="row workingspace">
+<div class="row workingspace" id="about">
     <div class="col-lg-6 profil">
         <img src="{{asset('port-folio/img/youssad.jpg')}}" alt="workingspace" class="img-fluid rounded-circle">
     </div>
@@ -44,7 +44,7 @@
                     Si vous recherchez un développeur fullstack polyvalent, capable de combiner des compétences en 
                     mathématiques et en informatique pour créer des solutions technologiques de qualité, je suis prêt 
                     à contribuer à votre projet ou à votre entreprise.
-                </br>
+                <br>
             </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

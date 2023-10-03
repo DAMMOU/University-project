@@ -7,7 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
             <a class="nav-link active" href="{{route('portfolio')}}">Home <span class="sr-only">(current)</span></a>
-            <a class="btn btn-primary tombol" href="{{route('about_portfolio')}}">About</a>
+            <a class="btn btn-primary tombol" href="#about">About</a>
         </div>
         </div>
     </div>
@@ -15,6 +15,6 @@
  <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1 class="display-4"><span>PERMETZ-MOI DE VOUS PRÉSENTER</span><br>MOI-MÊME</h1>
-        <a href="" class="btn btn-primary tombol">Join us</a> 
+        <a href="#experiences" class="btn btn-primary tombol">Expériences & Formations</a>  
     </div>
 </div>

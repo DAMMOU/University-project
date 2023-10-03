@@ -29,15 +29,8 @@
         <div class="container">
             @include('portfolio.networks')       
             @include('portfolio.presentation')
-                
-
-            <section class="testimonial">
-                <div class="row justify-content-center quote">
-                    <div class="col-lg-8">
-                        <h5>"Travailler avec amour"</h5>
-                    </div>
-                </div>
-            </section> 
+            @include('portfolio.project') 
+            @include('portfolio.formations')
             @include('portfolio.footer')
         </div>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
