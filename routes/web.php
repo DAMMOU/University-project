@@ -2,6 +2,7 @@
 
 /////////////////////////////// Admin ////////////////////////////////////
 use App\Http\Controllers\LocaleController;
+use App\Http\Controllers\Portfolio;
 use App\Http\Controllers\RestApi;
 use App\Http\Livewire\Admin\CategorieEtablissements;
 use App\Http\Livewire\Admin\Etablissements;
@@ -72,7 +73,10 @@ Route::middleware(['web'])->group(function () {
     Route::get('/lafacStore', LafacStore::class)->name('lafac-store');
 });
 
-
+Route::middleware(['web'])->group(function () {
+    Route::get('portfolio',[Portfolio::class, 'index'])->name('portfolio');
+    Route::get('portfolio/about',[Portfolio::class, 'indexAbout'])->name('about_portfolio');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
