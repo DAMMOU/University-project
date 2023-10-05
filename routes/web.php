@@ -2,8 +2,7 @@
 
 /////////////////////////////// Admin ////////////////////////////////////
 use App\Http\Controllers\LocaleController;
-use App\Http\Controllers\Portfolio;
-use App\Http\Controllers\RestApi;
+
 use App\Http\Livewire\Admin\CategorieEtablissements;
 use App\Http\Livewire\Admin\Etablissements;
 use App\Http\Livewire\Admin\Filieres;
@@ -33,7 +32,8 @@ use App\Http\Livewire\Client\Inscription;
 
 /////////////////////////////// __Lafac_Store__ ////////////////////////////////////
 use App\Http\Livewire\Lafacstore\LafacStore;
-
+/////////////////////////////// __Portfolio__ ////////////////////////////////////
+use App\Http\Controllers\PortfolioController;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -49,7 +49,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+Route::get('/ayya', function () {
+    return view('ayya');
+});
 // FRONTEND ROUTES
 Route::get('/', Accueil::class)->name('accueil');
 Route::get('/universites', Universites::class)->name('universites');
@@ -74,9 +76,12 @@ Route::middleware(['web'])->group(function () {
 });
 
 Route::middleware(['web'])->group(function () {
-    Route::get('portfolio',[Portfolio::class, 'index'])->name('portfolio');
-    Route::get('portfolio/about',[Portfolio::class, 'indexAbout'])->name('about_portfolio');
+    Route::get('portfolio',[PortfolioController::class, 'index'])->name('portfolio');
+    Route::post('portfolio',[PortfolioController::class, 'store'])->name('portfolio.store');
 });
+
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
