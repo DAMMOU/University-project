@@ -46,7 +46,7 @@
 				<div class="header-text">
 					<h2>hi <span>,</span> i am <br> full stack <br> developer <span>.</span></h2>
 					<p>Full Stack developers have expertise in both front-end and back-end development, making them versatile in creating web applications and websites.</p>
-					<a href="assets/download/browney.txt" download>download resume</a>
+					<a href="{{URL::asset('prot-folio/assets/download/pdfs/CV_2023_Youssef_DAMMOU.pdf')}}" download>download resume</a>
 				</div><!--/.header-text-->
 			</div><!--/.col-->
 		</div><!-- /.row-->

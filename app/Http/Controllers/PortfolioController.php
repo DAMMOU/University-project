@@ -4,17 +4,23 @@ namespace App\Http\Controllers;
 
 use App\Models\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 class PortfolioController extends Controller
 {
+    /**
+     * Show the portfolio page.
+     */
     public function index(){
         return view('portfolio.index');
     }
-    
+    /**
+     * Store a new message.
+     */
     public function store(Request $request)
     {
         // Validez les données du formulaire
-        $validatedData = $request->validate([
+        $validatedData = request()->validate([
             'fullName' => 'required',
             'email' => 'required|email',
             'subject' => 'nullable',
@@ -26,7 +32,9 @@ class PortfolioController extends Controller
         Message::create($validatedData);
 
         // Redirigez l'utilisateur vers une autre page après la soumission du formulaire
-        return redirect()->route('portfolio')->with('success', 'Message envoyé avec succès.');
+        session(['targetSection' => '#contact']);
+        return redirect()->back()->with('success', 'Message envoyé avec succès.');
+
     }
    
 }

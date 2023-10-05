@@ -9,31 +9,45 @@
 				<div class="col-md-offset-1 col-md-5 col-sm-6">
 					<div class="single-contact-box">
 						<div class="contact-form">
-							<form action="{{route('portfolio')}}" method="psot">
+							@if ($errors->any())
+								<div class="alert alert-danger">
+									<ul>
+										@foreach ($errors->all() as $error)
+											<li>{{ $error }}</li>
+										@endforeach
+									</ul>
+								</div>
+							@endif
+							@if(session('success'))
+								<div class="alert alert-success">
+									{{ session('success') }}
+								</div>
+							@endif
+							<form action="{{route('portfolio.store')}}" method="post">
                                 @csrf
 								<div class="row">
 									<div class="col-sm-6 col-xs-12">
 										<div class="form-group">
-										  <input type="text" class="form-control" id="name" placeholder="Name*" name="fullName">
+										  	<input type="text" class="form-control @error('fullName') is-invalid @enderror" id="name" placeholder="Name*" name="fullName">
 										</div><!--/.form-group-->
 									</div><!--/.col-->
 									<div class="col-sm-6 col-xs-12">
 										<div class="form-group">
-											<input type="email" class="form-control" id="email" placeholder="Email*" name="email">
+											<input type="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="Email*" name="email">
 										</div><!--/.form-group-->
 									</div><!--/.col-->
 								</div><!--/.row-->
 								<div class="row">
 									<div class="col-sm-12">
 										<div class="form-group">
-											<input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
+											<input type="text" class="form-control @error('subject') is-invalid @enderror" id="subject" placeholder="Subject" name="subject">
 										</div><!--/.form-group-->
 									</div><!--/.col-->
 								</div><!--/.row-->
 								<div class="row">
 									<div class="col-sm-12">
 										<div class="form-group">
-											<textarea class="form-control" rows="8" id="comment" placeholder="Message" name="message"></textarea>
+											<textarea class="form-control @error('message') is-invalid @enderror" rows="8" id="comment" placeholder="Message" name="message"></textarea>
 										</div><!--/.form-group-->
 									</div><!--/.col-->
 								</div><!--/.row-->
@@ -53,7 +67,7 @@
 						<div class="contact-adress">
 							<div class="contact-add-head">
 								<h3>Youssad</h3>
-								<p>FULL STACK DEVELOPER</p>
+								<p>FULL STACK DEVELOPER </p>
 							</div>
 							<div class="contact-add-info">
 								<div class="single-contact-add-info">
@@ -87,3 +101,4 @@
 
 </section><!--/.contact-->
 		<!--contact end -->
+

@@ -80,7 +80,10 @@ Route::middleware(['web'])->group(function () {
     Route::post('portfolio',[PortfolioController::class, 'store'])->name('portfolio.store');
 });
 
-
+Route::controller(PortfolioController::class)->group(function () {
+    Route::get('portfolio',[PortfolioController::class, 'index'])->name('portfolio');
+    Route::post('portfolio/store',[PortfolioController::class, 'store'])->name('portfolio.store');
+});
 
 Auth::routes();
 
