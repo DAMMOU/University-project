@@ -32,9 +32,11 @@ use App\Http\Livewire\Client\Inscription;
 
 /////////////////////////////// __Lafac_Store__ ////////////////////////////////////
 use App\Http\Livewire\Lafacstore\LafacStore;
+use App\Http\Livewire\Lafacstore\About;
+use App\Http\Livewire\Lafacstore\Contact;
 /////////////////////////////// __Portfolio__ ////////////////////////////////////
 use App\Http\Controllers\PortfolioController;
-
+;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -49,9 +51,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/ayya', function () {
-    return view('ayya');
-});
+
 // FRONTEND ROUTES
 Route::get('/', Accueil::class)->name('accueil');
 Route::get('/universites', Universites::class)->name('universites');
@@ -73,13 +73,14 @@ Route::get('locale/{lang}',[LocaleController::class, 'language'])->name('locale'
 // Lafacstore ROUTES
 Route::middleware(['web'])->group(function () {
     Route::get('/lafacStore', LafacStore::class)->name('lafac-store');
+    Route::get('/lafacStore/about-us', About::class)->name('lafac-store.about-us');
+    Route::get('/lafacStore/ikhan', Contact::class)->name('lafac-store.contact-us');
+
+   
 });
 
-Route::middleware(['web'])->group(function () {
-    Route::get('portfolio',[PortfolioController::class, 'index'])->name('portfolio');
-    Route::post('portfolio',[PortfolioController::class, 'store'])->name('portfolio.store');
-});
 
+// Portfolio ROUTES
 Route::controller(PortfolioController::class)->group(function () {
     Route::get('portfolio',[PortfolioController::class, 'index'])->name('portfolio');
     Route::post('portfolio/store',[PortfolioController::class, 'store'])->name('portfolio.store');

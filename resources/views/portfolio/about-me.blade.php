@@ -55,8 +55,8 @@
 									</a>
 								</li><!-- / li -->
 								<li>
-									<a href="#">
-										<i  class="https://lafac.net/" aria-hidden="true"></i>
+									<a href="https://lafac.net/">
+										<i  class="fa fa-dribbble" aria-hidden="true"></i>
 									</a>
 									
 								</li><!-- / li -->

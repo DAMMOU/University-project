@@ -1,30 +1,51 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <title>LafacStore</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Faites des économies de temps et d'argent sur les achats de vos équipements informatiques, (ordinateurs, casques, chargeurs, imprimantes) disponibles dans toutes les tailles et quantités. Avec des prix compétitifs, une livraison fiable et un large choix de produits disponibles, Amazon Business simplifie vos achats professionnels.">
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link href="{{asset('lafac-store/css/style.css')}}" rel="stylesheet">
+<html lang="en">
 
-        @stack('css')
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        @livewireStyles
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Pod Talk - Free Bootstrap 5 CSS Template</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{asset('lafac-store/css/bootstrap.min.css')}}">
+
+    <link rel="stylesheet" href="{{asset('lafac-store/css/bootstrap-icons.css')}}">
+
+    <link rel="stylesheet" href="{{asset('lafac-store/css/owl.carousel.min.css')}}">
+
+    <link rel="stylesheet" href="{{asset('lafac-store/css/owl.theme.default.min.css')}}">
+
+    <link href="{{URL::asset('lafac-store/css/templatemo-pod-talk.css')}}" rel="stylesheet">
+
+    <!-- TemplateMo 584 Pod Talk
+
+    https://templatemo.com/tm-584-pod-talk
+
+    -->
     </head>
 
     <body>
-        <main>
-            @yield('main')
-        </main>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script>
-        @stack('js')
-        @livewireScripts
+            <main>
+                @yield('main')
+            </main>
+
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="{{URL::asset('lafac-store/js/jquery.min.js')}}"></script>
+        <script src="{{URL::asset('lafac-store/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{URL::asset('lafac-store/js/owl.carousel.min.js')}}"></script>
+        <script src="{{URL::asset('lafac-store/js/custom.js')}}"></script>
+
     </body>
+
 </html>
