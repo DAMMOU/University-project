@@ -2,6 +2,8 @@
 @section('main')
     @include('livewire.lafacstore.nav-bar')
     @include('livewire.lafacstore.header')
+    @include('livewire.lafacstore.products')
+    @include('livewire.lafacstore.categories')
     @include('livewire.lafacstore.cart')
     @include('livewire.lafacstore.footer')
 @endsection

@@ -16,7 +16,7 @@
             <div class="container-xxl bd-gutter">
                 <div class="col-md-8 mx-auto text-center">
                     <a class="d-flex flex-column flex-lg-row justify-content-center align-items-center mb-4 text-dark lh-sm text-decoration-none" 
-                        href="#">
+                        href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=udammou@gmail.com">
                         <strong class="d-sm-inline-block p-2 me-2 mb-2 mb-lg-0 rounded-3 masthead-notice" style="background-color: rgb(255, 228, 132);">
                           {{ __('Share with everyone') }}
                         </strong>
@@ -32,7 +32,7 @@
                         {{ __('Our platform is the ideal place to explore university study options in Morocco. Find the best educational resources to succeed in your studies.') }}
                     </p>
 
-                    <div class="container">
+                    <div class="container">                                           
                       <div class="row   row-cols-2 row-cols-sm-2 row-cols-md-4 g-2">
                         <div class="col">
                           <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" 

@@ -2,7 +2,8 @@
 
 namespace App\Http\Livewire\Lafacstore;
 
-
+use App\Models\Category;
+use App\Models\Product;
 use Livewire\Component;
 
 class LafacStore extends Component
@@ -15,7 +16,12 @@ class LafacStore extends Component
 
     public function render()
     {
-        return view('livewire.lafacstore.index')
+        $categories = Category::all();
+        $products = Product::all();
+        return view('livewire.lafacstore.index',[
+            'categories' => $categories,
+            'products' => $products,
+        ])
             ->layout('layouts.lafac-store')
             ->section('main');
     }   

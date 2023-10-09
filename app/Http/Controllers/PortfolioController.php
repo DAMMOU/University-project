@@ -38,7 +38,7 @@ class PortfolioController extends Controller
     }
     
    // Afficher un utilisateur par son ID
-       public function show($id)
+    public function show($id)
     {
         $message = Message::find($id);
         $messageCount = Message::count();
