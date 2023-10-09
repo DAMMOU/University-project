@@ -4,7 +4,7 @@
 
             <div class="col-lg-12 col-12 text-center">
 
-                <h2 class="mb-0">About Pod</h2>
+                <h2 class="mb-0">About Lafac store</h2>
             </div>
 
         </div>

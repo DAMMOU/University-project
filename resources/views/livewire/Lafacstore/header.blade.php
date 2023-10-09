@@ -3,21 +3,22 @@
         <div class="row">
             <div class="col-lg-12 col-12">
                 <div class="text-center mb-5 pb-2">
-                    <h1 class="text-white">Listen to Pod Talk</h1>
-                    <p class="text-white">Listen it everywhere. Explore your fav podcasts.</p>
-                    <a href="#section_2" class="btn custom-btn smoothscroll mt-3">Start listening</a>
+                    <h1 class=" w-100 text-white p-md-5">Discover Student Essentials</h1>
+                    <p class="text-white">Lafac Store your one-stop shop for all your student needs in Morocco.</p>
+                    <a href="#section_2" class="btn custom-btn smoothscroll mt-3">{{__('Cart')}}</a>
                 </div>
+
                 <div class="owl-carousel owl-theme">
                     <div class="owl-carousel-info-wrap item">
-                        <img src="{{url::asset('lafac-store/images/profile/smiling-business-woman-with-folded-hands-against-white-wall-toothy-smile-crossed-arms.jpg')}}"
+                        <img src="{{URL::asset('lafac-store/images/profile/smiling-business-woman-with-folded-hands-against-white-wall-toothy-smile-crossed-arms.jpg')}}"
                             class="owl-carousel-image img-fluid" alt="">
                         <div class="owl-carousel-info">
                             <h4 class="mb-2">
-                                Candice
-                                <img src="{{url::asset('lafac-store/images/verified.png')}}" class="owl-carousel-verified-image img-fluid"
+                                {{__('Computers')}}
+                                <img src="{{URL::asset('lafac-store/images/verified.png')}}" class="owl-carousel-verified-image img-fluid"
                                     alt="">
                             </h4>
-                            <span class="badge">Storytelling</span>
+                            <span class="badge">{{__('Computers')}}</span>
                             <span class="badge">Business</span>
                         </div>
                         <div class="social-share">
@@ -31,13 +32,14 @@
                             </ul>
                         </div>
                     </div>
+
                     <div class="owl-carousel-info-wrap item">
-                        <img src="{{url::asset('lafac-store/images/profile/handsome-asian-man-listening-music-through-headphones.jpg')}}"
+                        <img src="{{URL::asset('lafac-store/images/profile/handsome-asian-man-listening-music-through-headphones.jpg')}}"
                             class="owl-carousel-image img-fluid" alt="">
                         <div class="owl-carousel-info">
                             <h4 class="mb-2">
-                                William
-                                <img src="{{url::asset('lafac-store/images/verified.png')}}" class="owl-carousel-verified-image img-fluid"
+                                Backpacks
+                                <img src="{{URL::asset('lafac-store/images/verified.png')}}" class="owl-carousel-verified-image img-fluid"
                                     alt="">
                             </h4>
                             <span class="badge">Creative</span>
@@ -57,13 +59,14 @@
                             </ul>
                         </div>
                     </div>
+
                     <div class="owl-carousel-info-wrap item">
-                        <img src="{{url::asset('lafac-store/images/profile/cute-smiling-woman-outdoor-portrait.jpg')}}"
+                        <img src="{{URL::asset('lafac-store/images/profile/cute-smiling-woman-outdoor-portrait.jpg')}}"
                             class="owl-carousel-image img-fluid" alt="">
                         <div class="owl-carousel-info">
-                            <h4 class="mb-2">Taylor</h4>
-                            <span class="badge">Modeling</span>
-                            <span class="badge">Fashion</span>
+                            <h4 class="mb-2">Stationery</h4>
+                            <span class="badge">Browse</span>
+                            <span class="badge"></span>
                         </div>
                         <div class="social-share">
                             <ul class="social-icon">
@@ -79,33 +82,18 @@
                             </ul>
                         </div>
                     </div>
+
+                    
                     <div class="owl-carousel-info-wrap item">
-                        <img src="{{url::asset('lafac-store/images/profile/man-portrait.jpg')}}" class="owl-carousel-image img-fluid" alt="">
-                        <div class="owl-carousel-info">
-                            <h4 class="mb-2">Nick</h4>
-                            <span class="badge">Acting</span>
-                        </div>
-                        <div class="social-share">
-                            <ul class="social-icon">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-instagram"></a>
-                                </li>
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-youtube"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="owl-carousel-info-wrap item">
-                        <img src="{{url::asset('lafac-store/images/profile/woman-posing-black-dress-medium-shot.jpg')}}"
+                        <img src="{{URL::asset('lafac-store/images/profile/woman-posing-black-dress-medium-shot.jpg')}}"
                             class="owl-carousel-image img-fluid" alt="">
                         <div class="owl-carousel-info">
                             <h4 class="mb-2">
-                                Elsa
-                                <img src="{{url::asset('lafac-store/images/verified.png')}}" class="owl-carousel-verified-image img-fluid"
+                                Personal Care Items
+                                <img src="{{URL::asset('lafac-store/images/verified.png')}}" class="owl-carousel-verified-image img-fluid"
                                     alt="">
                             </h4>
-                            <span class="badge">Influencer</span>
+                            <span class="badge">Browse</span>
                         </div>
                         <div class="social-share">
                             <ul class="social-icon">
@@ -118,24 +106,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="owl-carousel-info-wrap item">
-                        <img src="{{url::asset('lafac-store/images/profile/smart-attractive-asian-glasses-male-standing-smile-with-freshness-joyful-casual-blue-shirt-portrait-white-background.jpg')}}"
-                            class="owl-carousel-image img-fluid" alt="">
-                        <div class="owl-carousel-info">
-                            <h4 class="mb-2">Chan</h4>
-                            <span class="badge">Education</span>
-                        </div>
-                        <div class="social-share">
-                            <ul class="social-icon">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-linkedin"></a>
-                                </li>
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-whatsapp"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -155,7 +126,7 @@
                         <div class="custom-block-icon-wrap">
                             <div class="section-overlay"></div>
                             <a href="detail-page.html" class="custom-block-image-wrap">
-                                <img src="{{url::asset('lafac-store/images/podcast/11683425_4790593.jpg')}}"
+                                <img src="{{URL::asset('lafac-store/images/podcast/11683425_4790593.jpg')}}"
                                     class="custom-block-image img-fluid" alt="">
                                 <a href="#" class="custom-block-icon">
                                     <i class="bi-play-fill"></i>
@@ -182,11 +153,11 @@
                             </a>
                         </h5>
                         <div class="profile-block d-flex">
-                            <img src="{{url::asset('lafac-store/images/profile/woman-posing-black-dress-medium-shot.jpg')}}"
+                            <img src="{{URL::asset('lafac-store/images/profile/woman-posing-black-dress-medium-shot.jpg')}}"
                                 class="profile-block-image img-fluid" alt="">
                             <p>
                                 Elsa
-                                <img src="{{url::asset('lafac-store/images/verified.png')}}" class="verified-image img-fluid" alt="">
+                                <img src="{{URL::asset('lafac-store/images/verified.png')}}" class="verified-image img-fluid" alt="">
                                 <strong>Influencer</strong>
                             </p>
                         </div>
@@ -222,7 +193,7 @@
                         <div class="custom-block-icon-wrap">
                             <div class="section-overlay"></div>
                             <a href="detail-page.html" class="custom-block-image-wrap">
-                                <img src="{{url::asset('lafac-store/images/podcast/12577967_02.jpg')}}" class="custom-block-image img-fluid"
+                                <img src="{{URL::asset('lafac-store/images/podcast/12577967_02.jpg')}}" class="custom-block-image img-fluid"
                                     alt="">
                                 <a href="#" class="custom-block-icon">
                                     <i class="bi-play-fill"></i>
@@ -249,7 +220,7 @@
                             </a>
                         </h5>
                         <div class="profile-block d-flex">
-                            <img src="{{url::asset('lafac-store/images/profile/handsome-asian-man-listening-music-through-headphones.jpg')}}"
+                            <img src="{{URL::asset('lafac-store/images/profile/handsome-asian-man-listening-music-through-headphones.jpg')}}"
                                 class="profile-block-image img-fluid" alt="">
                             <p>William
                                 <strong>Vlogger</strong>
@@ -295,7 +266,7 @@
             <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                 <div class="custom-block custom-block-overlay">
                     <a href="detail-page.html" class="custom-block-image-wrap">
-                        <img src="{{url::asset('lafac-store/images/topics/physician-consulting-his-patient-clinic.jpg')}}"
+                        <img src="{{URL::asset('lafac-store/images/topics/physician-consulting-his-patient-clinic.jpg')}}"
                             class="custom-block-image img-fluid" alt="">
                     </a>
                     <div class="custom-block-info custom-block-overlay-info">
@@ -311,7 +282,7 @@
             <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                 <div class="custom-block custom-block-overlay">
                     <a href="detail-page.html" class="custom-block-image-wrap">
-                        <img src="{{url::asset('lafac-store/images/topics/repairman-doing-air-conditioner-service.jpg')}}"
+                        <img src="{{URL::asset('lafac-store/images/topics/repairman-doing-air-conditioner-service.jpg')}}"
                             class="custom-block-image img-fluid" alt="">
                     </a>
                     <div class="custom-block-info custom-block-overlay-info">
@@ -327,7 +298,7 @@
             <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                 <div class="custom-block custom-block-overlay">
                     <a href="detail-page.html" class="custom-block-image-wrap">
-                        <img src="{{url::asset('lafac-store/images/topics/woman-practicing-yoga-mat-home.jpg')}}"
+                        <img src="{{URL::asset('lafac-store/images/topics/woman-practicing-yoga-mat-home.jpg')}}"
                             class="custom-block-image img-fluid" alt="">
                     </a>
                     <div class="custom-block-info custom-block-overlay-info">
@@ -343,7 +314,7 @@
             <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                 <div class="custom-block custom-block-overlay">
                     <a href="detail-page.html" class="custom-block-image-wrap">
-                        <img src="{{url::asset('lafac-store/images/topics/delicious-meal-with-sambal-arrangement.jpg')}}"
+                        <img src="{{URL::asset('lafac-store/images/topics/delicious-meal-with-sambal-arrangement.jpg')}}"
                             class="custom-block-image img-fluid" alt="">
                     </a>
                     <div class="custom-block-info custom-block-overlay-info">
@@ -371,7 +342,7 @@
                 <div class="custom-block custom-block-full">
                     <div class="custom-block-image-wrap">
                         <a href="detail-page.html">
-                            <img src="{{url::asset('lafac-store/images/podcast/27376480_7326766.jpg')}}" class="custom-block-image img-fluid"
+                            <img src="{{URL::asset('lafac-store/images/podcast/27376480_7326766.jpg')}}" class="custom-block-image img-fluid"
                                 alt="">
                         </a>
                     </div>
@@ -382,7 +353,7 @@
                             </a>
                         </h5>
                         <div class="profile-block d-flex">
-                            <img src="{{url::asset('lafac-store/images/profile/woman-posing-black-dress-medium-shot.jpg')}}"
+                            <img src="{{URL::asset('lafac-store/images/profile/woman-posing-black-dress-medium-shot.jpg')}}"
                                 class="profile-block-image img-fluid" alt="">
                             <p>Elsa
                                 <strong>Influencer</strong>
@@ -415,7 +386,7 @@
                 <div class="custom-block custom-block-full">
                     <div class="custom-block-image-wrap">
                         <a href="detail-page.html">
-                            <img src="{{url::asset('lafac-store/images/podcast/27670664_7369753.jpg')}}" class="custom-block-image img-fluid"
+                            <img src="{{URL::asset('lafac-store/images/podcast/27670664_7369753.jpg')}}" class="custom-block-image img-fluid"
                                 alt="">
                         </a>
                     </div>
@@ -426,11 +397,11 @@
                             </a>
                         </h5>
                         <div class="profile-block d-flex">
-                            <img src="{{url::asset('lafac-store/images/profile/cute-smiling-woman-outdoor-portrait.jpg')}}"
+                            <img src="{{URL::asset('lafac-store/images/profile/cute-smiling-woman-outdoor-portrait.jpg')}}"
                                 class="profile-block-image img-fluid" alt="">
                             <p>
                                 Taylor
-                                <img src="{{url::asset('lafac-store/images/verified.png')}}" class="verified-image img-fluid" alt="">
+                                <img src="{{URL::asset('lafac-store/images/verified.png')}}" class="verified-image img-fluid" alt="">
                                 <strong>Creator</strong>
                             </p>
                         </div>
@@ -461,7 +432,7 @@
                 <div class="custom-block custom-block-full">
                     <div class="custom-block-image-wrap">
                         <a href="detail-page.html">
-                            <img src="{{url::asset('lafac-store/images/podcast/12577967_02.jpg')}}" class="custom-block-image img-fluid"
+                            <img src="{{URL::asset('lafac-store/images/podcast/12577967_02.jpg')}}" class="custom-block-image img-fluid"
                                 alt="">
                         </a>
                     </div>
@@ -472,11 +443,11 @@
                             </a>
                         </h5>
                         <div class="profile-block d-flex">
-                            <img src="{{url::asset('lafac-store/images/profile/handsome-asian-man-listening-music-through-headphones.jpg')}}"
+                            <img src="{{URL::asset('lafac-store/images/profile/handsome-asian-man-listening-music-through-headphones.jpg')}}"
                                 class="profile-block-image img-fluid" alt="">
                             <p>
                                 William
-                                <img src="{{url::asset('lafac-store/images/verified.png')}}" class="verified-image img-fluid" alt="">
+                                <img src="{{URL::asset('lafac-store/images/verified.png')}}" class="verified-image img-fluid" alt="">
                                 <strong>Vlogger</strong>
                             </p>
                         </div>

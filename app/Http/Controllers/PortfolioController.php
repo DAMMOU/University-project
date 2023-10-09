@@ -33,8 +33,28 @@ class PortfolioController extends Controller
 
         // Redirigez l'utilisateur vers une autre page après la soumission du formulaire
         session(['targetSection' => '#contact']);
-        return redirect()->back()->with('success', 'Message envoyé avec succès.');
+        return redirect()->back()->with('message', 'Message envoyé avec succès.');
 
     }
-   
+    
+   // Afficher un utilisateur par son ID
+       public function show($id)
+    {
+        $message = Message::find($id);
+        $messageCount = Message::count();
+        if (!$message) {
+            return response()->json([
+                'message' => 'Message non trouvé', 
+                'messageCount' => $messageCount,
+            ], 404);
+        }
+        return response()->json([
+            'message' => $message,
+            'messageCount' => $messageCount,
+        ], 404);
+    }
+
+
+
+  
 }
