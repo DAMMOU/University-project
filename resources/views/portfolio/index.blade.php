@@ -65,6 +65,8 @@
 
         @include('portfolio.experiences')
         
+        @include('portfolio.portfolio')
+        
         @include('portfolio.contact-me')
 
         @include('portfolio.footer')

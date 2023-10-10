@@ -56,7 +56,7 @@
 								</li><!-- / li -->
 								<li>
 									<a href="https://lafac.net/">
-										<i  class="fa fa-dribbble" aria-hidden="true"></i>
+										<i  class="fa fa fa-dribbble" aria-hidden="true"></i>
 									</a>
 									
 								</li><!-- / li -->

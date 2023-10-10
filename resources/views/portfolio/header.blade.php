@@ -22,9 +22,9 @@
 	                    <li class="smooth-menu"><a href="#education">{{__('education')}}</a></li>
 	                    <li class="smooth-menu"><a href="#skills">{{__('skills')}}</a></li>
 	                    <li class="smooth-menu"><a href="#experience">{{__('experience')}}</a></li>
-	                    <li class="smooth-menu"><a href="#profiles">{{__('profile')}}</a></li>
+	                    {{-- <li class="smooth-menu"><a href="#profiles">{{__('profile')}}</a></li> --}}
 	                    <li class="smooth-menu"><a href="#portfolio">{{__('portfolio')}}</a></li>
-	                    <li class="smooth-menu"><a href="#clients">{{__('clients')}}</a></li>
+	                    {{-- <li class="smooth-menu"><a href="#clients">{{__('clients')}}</a></li> --}}
 	                    <li class="smooth-menu"><a href="#contact">{{__('contact')}}</a></li>
 	                </ul><!--/.nav -->
 	            </div><!-- /.navbar-collapse -->
@@ -44,11 +44,12 @@
 		<div class="row">
 			<div class="col-md-12 text-center">
 				<div class="header-text">
-					<h2>hi <span>,</span> i am <br> full stack <br> developer <span>.</span></h2>
+					<h2>hi<span>,</span> i am <br> full stack <br> developer<span>.</span></h2>
 					<p>Full Stack developers have expertise in both front-end and back-end development, making them versatile in creating web applications and websites.</p>
-					<a href="{{URL::asset('prot-folio/assets/download/pdfs/CV_2023_Youssef_DAMMOU.pdf')}}" download>download resume</a>
+					<a href="https://lafac.net/CV_DAMMOU_Youssef.pdf" download="">download resume</a>
 				</div><!--/.header-text-->
 			</div><!--/.col-->
 		</div><!-- /.row-->
 	</div><!-- /.container-->
 </section><!--/.welcome-hero-->
+
